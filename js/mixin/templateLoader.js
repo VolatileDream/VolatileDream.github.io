@@ -12,13 +12,15 @@ define([
 	 *  for the view.
 	 *
 	 */
-
+	 var field= 'templateUrl';
 
 	var mixin = Ember.Mixin.create({
 
 		init: function(){
 
-			var templateURL = this.get('templateURL');
+			this._super();
+			
+			var templateURL = this.get( field );
 
 			if( typeof(templateURL) ==='function' ){
 				templateURL = templateURL.apply( this );
@@ -26,7 +28,7 @@ define([
 
 			if( typeof(templateURL) !== 'string' ){
 				throw new Error('This object extends the TemplateLoader Mixin,'
-					+" but does not a field 'templateURL' that is a URL/function.");
+					+" but does not a field '"+field+"'' that is a URL/function.");
 			}
 
 			$.ajax({
@@ -56,4 +58,5 @@ define([
 
 	});
 
+	return mixin;
 });
