@@ -1,0 +1,22 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand">Gianni Gambetti</a>
+      <a class="brand hidden-desktop">{{App.router.infoController.content.motto}}</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          {{#each tab in view.generatedTabs}}
+          <li class="nav-element" id="loc-about">
+            <a href="#about"><i class="{{unbound}}"></i>About</a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
