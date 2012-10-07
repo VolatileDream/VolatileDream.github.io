@@ -7,7 +7,7 @@ define([
 		templateUrl: 'template/pageTemplate.html',
 		heading: 'Put Heading Here',
 		tagline: 'Put Tagline Here',
-		content: Ember.View
+		contentView: Ember.View
 	});
 
 	return view;
