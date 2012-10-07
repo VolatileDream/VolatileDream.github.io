@@ -1,6 +1,6 @@
 define([
-	'ember',
-	'jquery'
+	'lib/ember',
+	'lib/jquery'
 ],function( Ember, $ ){
 	
 	/**
@@ -45,7 +45,7 @@ define([
 
 		_loaderMixin_error: function( url ){
 			return function( xhr, status, thrown ){
-				console.log('unable to load: ' + url+' due to '+status, thrown );
+				console.error('unable to load: ' + url+' due to '+status, thrown );
 			}
 		},
 
@@ -57,7 +57,7 @@ define([
 
 				if( typeof(dataUrl) === "function" ){
 					// call the fuction
-					dataUrl = dataUrl();
+					dataUrl = dataUrl.apply( this );
 				}
 
 				if( typeof(dataUrl) !== "string" ){
@@ -77,6 +77,7 @@ define([
 				throw new Error("This object has been extended with the loader mixin, and is missing a 'dataUrl' field.");
 			}	
 		}.observes('dataUrl')
+
 	});
 
 	return loader;
