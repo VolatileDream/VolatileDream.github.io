@@ -10,7 +10,7 @@ define([
 		navInfo: { name:'About', location: '/about', icon: 'icon-user' },
 
 		contentView: Ember.View.extend( templateLoader, {
-			templateUrl: 'template/about.html'
+			templateUrl: 'template/about.html',
 			contentBinding: Ember.Binding.oneWay('parentView.content')
 		})
 

@@ -1,15 +1,19 @@
 define([
   'lib/ember',
-  'lib/jquery'
-],function( Ember, $ ){
+  'lib/jquery',
+  'view/NavigationTabView'
+],function( Ember, $, NavigationTabView ){
 
     var view= Ember.View.extend({
-      template: Ember.Handlebars.compile('{{outlet}}'),
+      template: Ember.Handlebars.compile('{{view view.NavigationTabView}}{{outlet}}'),
+
+      NavigationTabView: NavigationTabView,
+
       didInsertElement: function(){
 
       	// re-run the enter state of the currentroute
       	// this works around some issues with the
-      	// navtab controller
+      	// NavigationTabView controller
         App.router.currentState.enter( App.router );
       }
     });
