@@ -11,10 +11,13 @@ define([
   'ctrlr/router',
 	'view/ApplicationView',
   'ctrlr/ApplicationController',
+  'view/AboutView',
+  'ctrlr/AboutController',
 	'lib/bootstrap'
 ],function(
   Ember, router,
-  appView, appCtrlr
+  appView, appCtrlr,
+  aboutV, aboutC
 ){
   
   var App = Em.Application.create({
@@ -22,6 +25,9 @@ define([
     ApplicationController: appCtrlr,
     ApplicationView: appView,
     
+    AboutController: aboutC,
+    AboutView: aboutV,
+
     ready: function(){
       console.log('init');
     }

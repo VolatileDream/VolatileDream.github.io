@@ -20,7 +20,7 @@ define([
 				navTab: 'about',
 				route: '/about',
 				connectOutlets: function( router, evnt ){
-					//router.get('applicationController').connectOutlet( 'about' );
+					router.get('applicationController').connectOutlet( 'about' );
 				}
 			})
 		})

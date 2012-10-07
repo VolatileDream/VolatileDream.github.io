@@ -4,6 +4,7 @@ define([
 ],function( Ember, $ ){
 
     var view= Ember.View.extend({
+      template: Ember.Handlebars.compile('{{outlet}}'),
       didInsertElement: function(){
 
       	// re-run the enter state of the currentroute

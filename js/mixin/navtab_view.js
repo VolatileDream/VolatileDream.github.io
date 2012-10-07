@@ -49,7 +49,7 @@ define([
 					+" or a function that returns one.");
 			}
 
-			return navInfo;
+			return nv;
 
 		},
 

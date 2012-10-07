@@ -11,6 +11,8 @@ define([
 
 	var registry = Ember.ArrayController.create({
 
+		content: [],
+		
 		_registry: {},
 
 		register: function( name, location, icon ){
