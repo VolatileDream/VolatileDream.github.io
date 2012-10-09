@@ -6,27 +6,35 @@ require.config({
 });
 
 
-define([
+requirejs([
 	'lib/ember',
   'ctrlr/router',
 	'view/ApplicationView',
   'ctrlr/ApplicationController',
   'view/AboutView',
   'ctrlr/AboutController',
+  'ctrlr/NavigationTabController',
+  // things we don't care about:
 	'lib/bootstrap'
 ],function(
   Ember, router,
   appView, appCtrlr,
-  aboutV, aboutC
+  aboutView, aboutController,
+  NavigationTabController,
+  bootstrap
 ){
   
-  var App = Em.Application.create({
+  App = window.App = Em.Application.create({
     
     ApplicationController: appCtrlr,
     ApplicationView: appView,
     
-    AboutController: aboutC,
-    AboutView: aboutV,
+    AboutController: aboutController,
+    AboutView: aboutView,
+
+    NavigationTabController: NavigationTabController,
+
+    Router: router,
 
     ready: function(){
       console.log('init');
@@ -34,9 +42,7 @@ define([
 
   });
 
-  var routerInstance = router.create();
+  App.initialize();
 
-  App.initialize( routerInstance );
-
-  return (window.App = App);
+  return App;
 });

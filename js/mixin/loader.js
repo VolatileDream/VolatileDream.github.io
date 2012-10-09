@@ -39,7 +39,7 @@ define([
 		_loaderMixin_success: function( controller, url ){
 			return function( data, status, xhr ){
 				console.log('loaded: ' + url );
-				controller.set(dataField, data);
+				controller.set('content', data);
 			}
 		},
 

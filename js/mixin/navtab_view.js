@@ -1,8 +1,7 @@
 
 define([
-	'lib/ember',
-	'ctrlr/NavigationTabController'
-],function( Ember, navCtrl ){
+	'lib/ember'
+],function( Ember ){
 
 	/**
 	 *
@@ -31,8 +30,8 @@ define([
 			this._super();
 
 			var navInfo = this.navtab_navInfo();
-
-			navCtrl.register( navInfo.name, navInfo.location, navInfo.icon );
+			// icky global
+			App.router.navigationTabController.register( navInfo.name, '#/'+navInfo.location, navInfo.icon );
 		},
 
 		navtab_navInfo:function(){

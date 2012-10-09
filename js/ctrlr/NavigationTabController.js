@@ -9,7 +9,7 @@ define([
 	 *
 	 */
 
-	var registry = Ember.ArrayController.create({
+	var registry = Ember.ArrayController.extend({
 
 		content: [],
 		
