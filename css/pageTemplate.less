@@ -1,6 +1,9 @@
 body #content {
 	margin-top: 40px;
 }
+body {
+	background-color: @backgroundColor;
+}
 body #content > .hero-unit {
-	border-radius: 0;
+	background-color: darken( @backgroundColor, 10% );
 }
