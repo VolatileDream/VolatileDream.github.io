@@ -31,7 +31,11 @@ define([
 
 			var navInfo = this.navtab_navInfo();
 			// icky global
-			App.router.navigationTabController.register( navInfo.name, '#/'+navInfo.location, navInfo.icon );
+			App.router.navigationTabController.register(
+				navInfo.name,
+				navInfo.location,
+				navInfo.icon
+			);
 		},
 
 		navtab_navInfo:function(){

@@ -21,7 +21,12 @@ define([
 				throw new Error( name + ' has already been added to the NavTab Mixin registry');
 			}
 
-			var tab = { name: name, location: location, icon: icon };
+			var tab = {
+				name: name,
+				location: '#/'+location,
+				id: 'nav-location-' + location,
+				icon: icon
+			};
 			this._registry[name] = tab;
 
 			this.addObject( tab );

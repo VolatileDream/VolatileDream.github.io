@@ -10,7 +10,7 @@
       <div class="nav-collapse collapse">
         <ul class="nav">
           {{#each tab in view.content}}
-          <li class="nav-element" id="loc-about">
+          <li class="nav-element" id="{{unbound tab.id}}">
             <a href="{{unbound tab.location}}"><i class="{{unbound tab.icon}}"></i> {{tab.name}}</a>
           </li>
           {{/each}}
