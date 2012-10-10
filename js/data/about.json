@@ -1,7 +1,14 @@
 {
-	"quick":"Gianni Gambetti is a software developer, student, geek, anthropomorphiser of computers and privacy enthusiast.",
-	"short":"Gianni Gambetti is a software developer, prefering to work with back end ",
-	"full":"full",
-	"other":"",
-	"updated":"7/10/2012"
+	"quick":"Gianni Gambetti is a software developer, student, geek, anthropomorphiser of computers and privacy enthusiast."
+	,"short":"Gianni Gambetti is a software developer, prefering to work with back end "
+	,"full":"Gianni gambetti is a software developer"
+	,"other":"Each of the web pages in this site has most of it's content hosted in a simple json object on the server, which you could query for the information instead of visiting the site. Pretty neat, no?"
+	,"builtWith":[
+		{ "title":"Ember", "site":"http://emberjs.com", "description":"A JavaScript MVC framework" }
+		,{ "title":"Less", "site":"http://lesscss.org", "description":"A dynamic stylesheet language" }
+		,{ "title":"jQuery", "site":"http://jQuery.com", "description":"Multipurpose JavaScript library" }
+		,{ "title":"Twitter Bootstrap", "site":"http://getbootstrap.com", "description":"Frontend framework for web development" }
+		,{ "title":"timeago", "site":"http://timeago.yarp.com/", "description":"Fuzzy timestamp library for JavaScript" }
+	]
+	,"updated":"2012-10-09"
 }
