@@ -1,14 +1,14 @@
 <div class="row-fluid">
-
 </div>
 <div class="row-fluid">
 	{{#each contact in contacts}}
-		<div class="span4">
-			<div class="card">
-				<div class="front">
-				</div>
-				<div class="back">
-				</div>
+		<div class="card" {{action click target="parentView"}}>
+			<div class="front">
+				{{contact}}
+				<img src="{{unbound contact.logo}}"></img>
+			</div>
+			<div class="back">
+
 			</div>
 		</div>
 	{{/each}}

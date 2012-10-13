@@ -10,8 +10,6 @@ define([
 		heading: 'Put Heading Here',
 		tagline: 'Put Tagline Here',
 		contentView: Ember.View,
-		// this is for use with the navtab stuff
-		navInfo: { name:'navtab name', location: 'navtab-location', icon: 'nav-icon' }
 	});
 
 	return view;
