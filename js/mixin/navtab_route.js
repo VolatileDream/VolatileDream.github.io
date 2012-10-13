@@ -1,38 +1,55 @@
 define([
 	'lib/ember',
 	'lib/jquery',
-	'ctrlr/NavigationTabController'
+	'ctrlr/NavigationTabRegistry'
 ],function( Ember, $, navReg ){
 
 	var loader = Ember.Mixin.create({
+
+		init: function(){
+			this._super();
+			
+			var navInfo = this.navtab_navInfo();
+
+			navReg.register(
+				navInfo.name,
+				navInfo.location,
+				navInfo.icon
+			);
+
+			this.set('route', '/' + navInfo.location );
+		},
+
 		enter: function( router ){
 			this._super(router);
 			
-			var navTab = this.get('navTab');
+			var navRoute = this.navtab_navInfo();
 			
-			if( navTab ){
+			$('.nav-element').removeClass('active');
 
-				if( typeof(navTab) === 'function' ){
-					navTab = navTab.apply( this );
-				}
+			$('#nav-location-' + navRoute.location ).addClass('active');
+		},
 
-				$('.nav-element').removeClass('active');
+		navtab_navInfo:function(){
 
-				$('#nav-location-' + navTab ).addClass('active');
+			var nv = this.get('navRoute');
 
-			}else{
-				throw new Error("This object has been extended with the NavigationTab mixin, and is missing a 'navTab' field.");
+			if( typeof(nv) === "function" ){
+				nv = nv.apply( this );
 			}
+
+			if( typeof(nv) !== "object" ){
+				throw new Error("This object extends the NavTab Mixin,"
+					+" but it's 'navInfo' property isn't an object"
+					+" or a function that returns one.");
+			}
+
+			return nv;
+
 		}
+
 	});
 
 	return loader;
 
-
-	function activeNav( part ){
-	  
-	  console.log('active: ' + part);
-	}
-	window.activeNav = activeNav;
-	return activeNav;
 });

@@ -1,10 +1,9 @@
 define([
 	'lib/ember',
-	'mixin/templateLoader',
-	'mixin/navtab_view'
-],function( Ember, templateLoader, navtab_view ){
+	'mixin/templateLoader'
+],function( Ember, templateLoader ){
 
-	var view = Ember.View.extend( templateLoader, navtab_view, {
+	var view = Ember.View.extend( templateLoader, {
 		templateUrl: '/template/pageTemplate.html',
 
 		//override everything below here:

@@ -17,10 +17,16 @@ define([
 			}),
 			
 			about: Ember.Route.extend( navRoute, {
-				navTab: 'about',
-				route: '/about',
+				navRoute: { name:'About', location: 'about', icon: 'icon-user' },
 				connectOutlets: function( router, evnt ){
 					router.get('applicationController').connectOutlet( 'about' );
+				}
+			}),
+
+			contact: Ember.Route.extend( navRoute, {
+				navRoute: { name:'Contact', location: 'contact', icon: 'icon-envelope' },
+				connectOutlets:function( router, evnt ){
+					router.get('applicationController').connectOutlet( 'contact' );
 				}
 			})
 		})

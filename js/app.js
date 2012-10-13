@@ -13,6 +13,8 @@ requirejs([
   'ctrlr/ApplicationController',
   'view/AboutView',
   'ctrlr/AboutController',
+  'view/ContactView',
+  'ctrlr/ContactController',
   'ctrlr/NavigationTabController',
   // things we don't care about:
 	'lib/bootstrap'
@@ -20,6 +22,7 @@ requirejs([
   Ember, router,
   appView, appCtrlr,
   aboutView, aboutController,
+  ContactView, ContactController,
   NavigationTabController,
   bootstrap
 ){
@@ -31,6 +34,9 @@ requirejs([
     
     AboutController: aboutController,
     AboutView: aboutView,
+
+    ContactController: ContactController,
+    ContactView: ContactView,
 
     NavigationTabController: NavigationTabController,
 

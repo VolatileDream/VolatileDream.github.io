@@ -11,6 +11,8 @@ define([
 
       didInsertElement: function(){
 
+        $('abbr.timeago').timeago();
+
       	// re-run the enter state of the currentroute
       	// this works around some issues with the
       	// NavigationTabView controller

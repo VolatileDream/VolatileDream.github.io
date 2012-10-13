@@ -7,15 +7,14 @@ define([
 ],function( Ember, templateView, templateLoader, $, timeago ){
 	
 	var view = templateView.extend({
-		heading: 'Gianni Gambetti',
-		tagline: 'About Me',
+		heading: 'Contact Me',
+		tagline: 'Getting in touch',
 
 		contentView: Ember.View.extend( templateLoader, {
-			classNames: [ 'about' ],
-			templateUrl: '/template/about.html',
+			classNames: [ 'contact' ],
+			templateUrl: '/template/contact.html',
 			contentBinding: Ember.Binding.oneWay('parentView.content')
 		})
-
 	});
 
 	return view;
