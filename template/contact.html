@@ -1,11 +1,16 @@
 <div class="row-fluid">
 </div>
-<div class="row-fluid">
+<div class="row-fluid centered">
 	{{#each contact in contacts}}
 		<div class="card" {{action click target="parentView"}}>
 			<div class="front">
-				{{contact}}
-				<img src="{{unbound contact.logo}}"></img>
+				<a href="{{unbound contact.link}}">
+				<img
+					src="{{unbound contact.logo.url}}"
+					width="{{unbound contact.logo.width}}"
+					height="{{unbound contact.logo.height}}"
+					alt="{{unbound contact.name}}"></img>
+				<br>{{unbound contact.tagline}}</a>
 			</div>
 			<div class="back">
 

@@ -34,6 +34,8 @@
 	top: 0;
 	left: 0;
 	
+	padding-top: 10px;
+
 	width: 100%;
 	height: inherit;
 
@@ -50,20 +52,20 @@
 .card {
 	
 	/* from bootstrap, to work around quirks with what we want to do */
-	width: 23.404255319148934%;
+	width: 14.893617021276595%;
 	margin-right: 2.127659574468085%;
 	margin-bottom: 2.127659574468085%;
 	display: block;
 	float: left;
 
-	&:nth-of-type( 4n ){
+	&:nth-of-type( 6n ){
 		margin-right: 0 ;
 	}
 
 	/* end of bootstrap stuff */
 
 	/* test other heights */
-	height: 300px;
+	height: 100px;
 	position: relative;
 
 	-webkit-perspective: 600px;
@@ -80,6 +82,11 @@
 		z-index: 900;
 
 		.card-transform( rotateX(0deg) rotateY(0deg) );
+
+		a:hover {
+			text-style: none;
+		}
+
 	}
 
 	.back {

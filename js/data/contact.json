@@ -1,14 +1,59 @@
 {
 	"about":"",
 	"contacts":[
-		"abc",
-		"def",
-		"ghi",
-		"jkl",
-		"mno",
-		"pqr",
-		"stu",
-		"vwx",
-		"yz0"
+		{
+			"logo":{
+				"url":"//ssl.gstatic.com/images/icons/gplus-64.png",
+				"width":"64px",
+				"height":"64px"
+			},
+			"tagline":"on Google+",
+			"link":"//plus.google.com/113067837896503448428"
+		},
+		{
+			"logo": {
+				"url":"//twitter.com/images/resources/twitter-bird-light-bgs.png",
+				"width":"64px",
+				"height":"64px"
+			},
+			"tagline":"@volatiledream on Twitter",
+			"link":"//twitter.com/volatiledream"
+		},
+		{
+			"logo": {
+				"url":"//developer.linkedin.com/sites/default/files/LinkedIn_Logo60px.png",
+				"width":"64px",
+				"height":"100%"
+			},
+			"tagline":"on Linkedin",
+			"link":"//www.linkedin.com/in/giannigambetti"
+		},
+		{
+			"logo": {
+				"url":"lib/glyphicons/399_e-mail.png",
+				"width":"60px",
+				"height":"60px"
+			},
+			"tagline":"via email",
+			"link":"mailto:gianni@gambetti.ca"
+		},
+		{
+			"logo":{
+				"url":"//www.facebook.com/downloadtracker/download.php?rid=49&hash=AQAtrUXxaw-n7kbe",
+				"width":"64px",
+				"height":"64px"
+			},
+			"tagline":"on facebook",
+			"link":""
+		},
+		{
+			"logo":{
+				"url":"//octodex.github.com/images/original.jpg",
+				"width":"64px",
+				"height":"64px"
+			},
+			"tagline":"on github",
+			"link":"//github.com/jex"
+		}
 	]
 }
