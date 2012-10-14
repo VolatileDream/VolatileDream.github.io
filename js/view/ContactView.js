@@ -13,10 +13,7 @@ define([
 		contentView: Ember.View.extend( templateLoader, {
 			classNames: [ 'contact' ],
 			templateUrl: '/template/contact.html',
-			contentBinding: Ember.Binding.oneWay('parentView.content'),
-			click:function( evnt ){
-				$( evnt.currentTarget ).toggleClass('flip');
-			}
+			contentBinding: Ember.Binding.oneWay('parentView.content')
 		})
 	});
 
