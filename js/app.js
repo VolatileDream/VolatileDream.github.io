@@ -15,6 +15,8 @@ requirejs([
   'ctrlr/AboutController',
   'view/ContactView',
   'ctrlr/ContactController',
+  'view/ResumeView',
+  'ctrlr/ResumeController',
   'ctrlr/NavigationTabController',
   // things we don't care about:
 	'lib/bootstrap'
@@ -23,6 +25,7 @@ requirejs([
   appView, appCtrlr,
   aboutView, aboutController,
   ContactView, ContactController,
+  ResumeView, ResumeController,
   NavigationTabController,
   bootstrap
 ){
@@ -37,6 +40,9 @@ requirejs([
 
     ContactController: ContactController,
     ContactView: ContactView,
+
+    ResumeView: ResumeView,
+    ResumeController: ResumeController,
 
     NavigationTabController: NavigationTabController,
 
