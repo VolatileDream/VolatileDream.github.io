@@ -5,8 +5,8 @@ define([
 ],function( Ember, PageTemplateView, templateLoader ){
 
 	var view = PageTemplateView.extend({
-		heading: 'Resume',
-		tagline: 'Hire me?',
+		heading: 'My Resume',
+		tagline: "Where I've been, and what I've done",
 
 		contentView: Ember.View.extend( templateLoader, {
 			classNames: [ 'resume' ],
