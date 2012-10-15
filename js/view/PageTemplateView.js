@@ -4,7 +4,7 @@ define([
 ],function( Ember, templateLoader ){
 
 	var view = Ember.View.extend( templateLoader, {
-		templateUrl: '/template/pageTemplate.html',
+		templateUrl: 'template/pageTemplate.html',
 
 		//override everything below here:
 		heading: 'Put Heading Here',

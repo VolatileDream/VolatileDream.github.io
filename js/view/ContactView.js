@@ -12,7 +12,7 @@ define([
 
 		contentView: Ember.View.extend( templateLoader, {
 			classNames: [ 'contact' ],
-			templateUrl: '/template/contact.html',
+			templateUrl: 'template/contact.html',
 			contentBinding: Ember.Binding.oneWay('parentView.content')
 		})
 	});

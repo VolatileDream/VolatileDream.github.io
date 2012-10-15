@@ -12,7 +12,7 @@ define([
 
 		contentView: Ember.View.extend( templateLoader, {
 			classNames: [ 'about' ],
-			templateUrl: '/template/about.html',
+			templateUrl: 'template/about.html',
 			contentBinding: Ember.Binding.oneWay('parentView.content'),
 			didInsertElement:function(){
 				$('abbr.timeago').timeago();

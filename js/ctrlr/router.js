@@ -28,7 +28,15 @@ define([
 				connectOutlets:function( router, evnt ){
 					router.get('applicationController').connectOutlet( 'contact' );
 				}
+			}),
+
+			resume: Ember.Route.extend( navRoute, {
+				navRoute: { name: 'Resume', location: 'resume', icon: 'icon-file' },
+				connectOutlets:function( router, evnt ){
+					router.get('applicationController').connectOutlet( 'resume' );
+				}
 			})
+
 		})
 	});
 	return Router;
