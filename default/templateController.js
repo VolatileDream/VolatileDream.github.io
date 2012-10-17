@@ -4,7 +4,7 @@ define([
 ],function( Ember, loader ){
 	
 	var ctrl = Ember.ObjectController.extend( loader, {
-		dataUrl: 'js/data/about.json'
+		dataUrl: 'js/data/$name.json'
 	});
 
 	return ctrl;
