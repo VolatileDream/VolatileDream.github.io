@@ -1,3 +1,52 @@
 {
-	
+	"sections":[
+		{
+			"title":"Experience",
+			"elements":[
+				{
+					"title":"Desire2Learn Inc.",
+					"position":"Mobile Software Developer (coop)",
+					"start":"2012-01",
+					"end":"2012-05",
+					"points":[ "Primary Android developer for Grades checking integration module in Campus Life" ]
+				},
+				{
+					"title":"Desire2Learn Inc.",
+					"position":"Software Developer (coop)",
+					"start":"2011-05",
+					"end":"2011-11",
+					"points":[ "Organizational improvements to customer facing wiki for product setup" ]
+				},
+				{
+					"title":"Precidia Technologies Inc.",
+					"position":"ePayments Productivity Student (coop)",
+					"start":"2010-06",
+					"end":"2010-09",
+					"points":[
+						"Design and creation of test plan for eCommerce site",
+						"Organizational improvements to customer facing wiki for product setup"
+					]
+				}
+			]
+		},
+		{
+			"title":"Education",
+			"elements":[
+				{
+					"title":"University of Waterloo",
+					"position":"Bachelor of Computer Science",
+					"start":"2010-09",
+					"end":"2015 (expected)",
+					"points":[ ]
+				},
+				{
+					"title":"Earl of March Secondary School",
+					"position":"High School Diploma",
+					"start":"2006-09",
+					"end":"2010-06",
+					"points":[ "Member of the Ultimate Team", "Junior Band ( 2 years )" ]
+				}
+			]
+		}
+	]
 }

@@ -1,2 +1,33 @@
-<div>
+{{#each section in content.sections}}
+<div class="row-fluid">
+	<div class="span12 section-title">
+		<h2>{{section.title}}</h2>
+	</div>
 </div>
+	{{#each thing in section.elements}}
+	<div class="row-fluid sub-sections">
+		<div class="span10">
+			<h3 class="title">{{thing.title}}</h3><h5 class="position">{{thing.position}}</h5>
+		</div>
+		<div class="span2">
+			<h6 class="dates">{{thing.start}} to {{thing.end}}</h6>
+		</div>
+	</div>
+		{{#if thing.points.length}}
+		<div class="row-fluid points">
+			<div class="span12">
+				<ul>
+					{{#each point in thing.points}}
+						<li>
+							{{point}}
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+		<!-- end of thing points -->
+		{{/if}}
+		<!-- end of subsection -->
+	{{/each}}
+<!-- end of major section -->
+{{/each}}
