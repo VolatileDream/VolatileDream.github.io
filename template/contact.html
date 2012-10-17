@@ -1,20 +1,24 @@
-<div class="row-fluid">
-	Need to get in touch? Here's where to find me.
+<div class="row">
+	<div class="span4">
+		Need to get in touch? Here's where to find me.
+	</div>
 </div>
 <br/>
-<div class="row-fluid centered">
+<div class="row centered">
 	{{#each contact in contacts}}
-	<div class="card">
-		<a href="{{unbound contact.link}}">
-			<div class="content">
-				<img
-					src="{{unbound contact.logo.url}}"
-					width="{{unbound contact.logo.width}}"
-					height="{{unbound contact.logo.height}}"
-					alt="{{unbound contact.name}}"></img>
-				<br>{{unbound contact.tagline}}
-			</div>
-		</a>
+	<div class="span2">
+		<div class="card">
+			<a href="{{unbound contact.link}}">
+				<div class="content">
+					<img
+						src="{{unbound contact.logo.url}}"
+						width="{{unbound contact.logo.width}}"
+						height="{{unbound contact.logo.height}}"
+						alt="{{unbound contact.name}}"></img>
+					<br>{{unbound contact.tagline}}
+				</div>
+			</a>
+		</div>
 	</div>
 	{{/each}}
 </div>
