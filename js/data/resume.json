@@ -1,25 +1,25 @@
 {
 	"sections":[
 		{
-			"title":"Experience",
+			"title":"Internships",
 			"elements":[
 				{
-					"title":"Desire2Learn Inc.",
-					"position":"Mobile Software Developer (coop)",
+					"title":"Desire2Learn",
+					"position":"Mobile Software Developer",
 					"start":"2012-01",
 					"end":"2012-05",
 					"points":[ "Primary Android developer for Grades checking integration module in Campus Life" ]
 				},
 				{
-					"title":"Desire2Learn Inc.",
-					"position":"Software Developer (coop)",
+					"title":"Desire2Learn",
+					"position":"Software Developer",
 					"start":"2011-05",
 					"end":"2011-11",
 					"points":[ "Organizational improvements to customer facing wiki for product setup" ]
 				},
 				{
-					"title":"Precidia Technologies Inc.",
-					"position":"ePayments Productivity Student (coop)",
+					"title":"Precidia Technologies",
+					"position":"ePayments Productivity Student",
 					"start":"2010-06",
 					"end":"2010-09",
 					"points":[
@@ -40,7 +40,7 @@
 					"points":[ ]
 				},
 				{
-					"title":"Earl of March Secondary School",
+					"title":"Earl of March SS.",
 					"position":"High School Diploma",
 					"start":"2006-09",
 					"end":"2010-06",
