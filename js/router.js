@@ -46,7 +46,8 @@ define([
 						return { id: context.id };
 					},
 					connectOutlets: function( router, post ){
-						router.get('applicationController').connectOutlet( 'blogPost', post );
+						router.get('applicationController').connectOutlet( 'blog' );
+						router.get('blogController').set( 'currentPostId', post.id );
 					}
 				})
 			}),

@@ -19,8 +19,6 @@ requirejs([
   'ctrlr/ResumeController',
   'view/BlogView',
   'ctrlr/BlogController',
-  'view/BlogPostView',
-  'ctrlr/BlogPostController',
   'ctrlr/NavigationTabController',
   // things we don't care about:
 	'lib/bootstrap'
@@ -31,7 +29,6 @@ requirejs([
   ContactView, ContactController,
   ResumeView, ResumeController,
   BlogView, BlogController,
-  BlogPostView, BlogPostController,
   NavigationTabController,
   bootstrap
 ){
@@ -52,9 +49,6 @@ requirejs([
 
     BlogView: BlogView,
     BlogController: BlogController,
-
-    BlogPostView: BlogPostView,
-    BlogPostController: BlogPostController,
 
     NavigationTabController: NavigationTabController,
 
