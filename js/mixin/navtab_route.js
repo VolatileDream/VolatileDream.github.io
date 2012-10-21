@@ -46,9 +46,7 @@ define([
 					+" but it's 'navInfo' property isn't an object"
 					+" or a function that returns one.");
 			}
-
 			return nv;
-
 		}
 
 	});
