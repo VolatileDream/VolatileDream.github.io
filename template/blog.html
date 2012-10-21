@@ -1,0 +1,7 @@
+<ul>
+	{{#each post in controller}}
+	<li>
+		<a {{action showPost post}} href="#">{{post.title}}</a>
+	</li>
+	{{/each}}
+</ul>

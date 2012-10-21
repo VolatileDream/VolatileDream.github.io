@@ -23,6 +23,34 @@ define([
 				}
 			}),
 
+			blog: Ember.Route.extend( navRoute, {
+				navRoute: { name:'Blog', location: 'blog', icon: 'icon-list' },
+				
+				showPost: function( router, evnt ){
+					router.transitionTo('blog.post', evnt.context );
+				},	
+
+				index: Ember.Route.extend({
+					route: '/',
+					connectOutlets: function( router, evnt ){
+						router.get('applicationController').connectOutlet( 'blog' );
+					}
+				}),
+				
+				post: Ember.Route.extend({
+					route: '/post/:id',
+					deserialize: function( router, context ){
+						return router.get('blogController').getById( context.id );
+					},
+					serialize: function( router, context ){
+						return { id: context.id };
+					},
+					connectOutlets: function( router, post ){
+						router.get('applicationController').connectOutlet( 'blogPost', post );
+					}
+				})
+			}),
+
 			contact: Ember.Route.extend( navRoute, {
 				navRoute: { name:'Contact', location: 'contact', icon: 'icon-envelope' },
 				connectOutlets:function( router, evnt ){
