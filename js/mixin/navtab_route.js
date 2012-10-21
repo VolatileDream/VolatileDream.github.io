@@ -22,12 +22,15 @@ define([
 
 		enter: function( router ){
 			this._super(router);
-			
-			var navRoute = this.navtab_navInfo();
-			
-			$('.nav-element').removeClass('active');
+			this.navtab_setNav();
+		},
 
-			$('#nav-location-' + navRoute.location ).addClass('active');
+		navtab_setNav: function(){
+			var navRoute = this.navtab_navInfo();
+		
+			var ctrlr = App.get('router.navigationTabController');			
+
+			ctrlr.set('activeTab', navRoute.location );
 		},
 
 		navtab_navInfo:function(){

@@ -12,8 +12,8 @@ define([
 
 	var registry = Ember.ArrayController.extend({
 
-		content:  NavigationTabRegistry.content
-
+		content:  NavigationTabRegistry.content,
+		activeTab: null
 	});
 
 	return registry;
