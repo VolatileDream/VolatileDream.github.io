@@ -2,7 +2,7 @@ define([
 	'lib/ember',
 	'view/PageTemplateView',
 	'mixin/templateLoader',
-	'lib/jquery',
+	'lib/jquery'
 ],function( Ember, templateView, templateLoader, $ ){
 	
 	var view = templateView.extend({

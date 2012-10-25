@@ -1,14 +1,15 @@
 define([
 	'lib/ember',
-	'mixin/navtab_route'
-],function( Ember, navRoute ){
+	'mixin/navtab_route',
+	'mixin/actionLogger'
+],function( Ember, navRoute, actionLogger ){
 	
 
 	// Note that Routes here are extended using
 	// the NavigationTab mixin, which overrides Route.enter()
 
 	var Router = Ember.Router.extend({
-		enableLogging: true,
+		
 		root: Ember.Route.extend({
 
 			index: Ember.Route.extend({
@@ -23,7 +24,7 @@ define([
 				}
 			}),
 
-			blog: Ember.Route.extend( navRoute, {
+			blog: Ember.Route.extend( navRoute, actionLogger, {
 				navRoute: { name:'Blog', location: 'blog', icon: 'icon-list' },
 				
 				showPost: function( router, evnt ){

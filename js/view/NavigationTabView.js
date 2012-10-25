@@ -1,10 +1,17 @@
 define([
 	'lib/ember',
 	'lib/jquery',
-	'mixin/templateLoader'
-],function( Ember, $, templateLoader ){
+	'mixin/templateLoader',
+	'mixin/actionLogger'
+],function( Ember, $, templateLoader, actionLogger ){
 	
-	var view = Ember.View.extend( templateLoader, {
+	var view = Ember.View.extend( templateLoader, actionLogger, {
+
+		// for actionLogger
+		loggedFunctions: [ 'activateTab' ],
+
+		classNames: ['navigationTab'],
+
 		templateUrl: 'template/navtab.html',
 		controllerBinding: 'App.router.navigationTabController',
 		contentBinding: 'controller',
@@ -16,13 +23,17 @@ define([
 			},100);
 		},
 		changeTab: function(){
+
 			var tab = this.get('controller.activeTab');
+			this.activateTab( tab );
+
+		}.observes('controller.activeTab'),
+
+		activateTab: function( tab ){
 
 			$('.nav-element').removeClass('active');
-
 			$('#nav-location-' + tab ).addClass('active');
-
-		}.observes('controller.activeTab')
+		}
 	});
 
 
