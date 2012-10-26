@@ -2,8 +2,9 @@ define([
 	'lib/ember',
 	'view/PageTemplateView',
 	'mixin/templateLoader',
-	'lib/jquery'
-],function( Ember, templateView, templateLoader, $ ){
+	'lib/jquery',
+	'mixin/htmlEscapeHelper'
+],function( Ember, templateView, templateLoader, $, htmlEscapeHelper ){
 	
 	var view = templateView.extend({
 		heading: 'Blog',
