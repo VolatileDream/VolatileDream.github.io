@@ -1,11 +1,15 @@
 cd www
+put js/data/*		js/data/
+put css/*			css/
+put template/*		template/
+put img/*			img/
+
+put js/mixin/*		js/mixin/
 put js/ctrlr/*		js/ctrlr/
 put js/view/*		js/view/
-put js/data/*		js/data/
-put js/mixin/*		js/mixin/
 put js/*			js/
-put lib/*		lib/
-put lib/glyphicons/* lib/glyphicons/
-put css/*		css/
-put template/*		template/
+
 put index.html		index.html
+
+put lib/*			lib/
+put lib/glyphicons/* lib/glyphicons/
