@@ -2,8 +2,9 @@ define([
 	'lib/ember',
 	'lib/jquery',
 	'mixin/templateLoader',
-	'mixin/actionLogger'
-],function( Ember, $, templateLoader, actionLogger ){
+	'mixin/actionLogger',
+	'ctrlr/NavigationTabRegistry'
+],function( Ember, $, templateLoader, actionLogger, NavigationTabRegistry ){
 	
 	var view = Ember.View.extend( templateLoader, actionLogger, {
 
@@ -24,7 +25,10 @@ define([
 		},
 		changeTab: function(){
 
-			var tab = this.get('controller.activeTab');
+			var tabName = this.get('controller.activeTab');
+			
+			var tab = NavigationTabRegistry.get( tabName );
+
 			this.activateTab( tab );
 
 		}.observes('controller.activeTab'),
@@ -32,7 +36,10 @@ define([
 		activateTab: function( tab ){
 
 			$('.nav-element').removeClass('active');
-			$('#nav-location-' + tab ).addClass('active');
+
+			$( '#' + tab.id ).addClass('active');
+
+			$('head title').get(0).textContent = 'Gianni Gambetti - ' + tab.name;
 		}
 	});
 

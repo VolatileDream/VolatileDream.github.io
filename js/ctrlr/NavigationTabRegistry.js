@@ -20,9 +20,15 @@ define([
 				id: 'nav-location-' + location,
 				icon: icon
 			};
-			this._registry[name] = tab;
+			this._registry[location] = tab;
 
 			this.addObject( tab );
+		},
+
+		get: function( name ){
+
+			return this._registry[name];
+
 		},
 
 		remove: function( name ){

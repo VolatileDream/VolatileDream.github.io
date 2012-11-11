@@ -29,7 +29,6 @@ define([
 			var navRoute = this.navtab_navInfo();
 		
 			var ctrlr = App.get('router.navigationTabController');			
-
 			ctrlr.set('activeTab', navRoute.location );
 		},
 
