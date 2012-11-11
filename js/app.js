@@ -20,6 +20,7 @@ requirejs([
   'view/BlogView',
   'ctrlr/BlogController',
   'ctrlr/NavigationTabController',
+  'ctrlr/InfoController',
   // things we don't care about:
 	'lib/bootstrap'
 ],function(
@@ -30,6 +31,7 @@ requirejs([
   ResumeView, ResumeController,
   BlogView, BlogController,
   NavigationTabController,
+  InfoController,
   bootstrap
 ){
   
@@ -50,6 +52,7 @@ requirejs([
     BlogView: BlogView,
     BlogController: BlogController,
 
+    InfoController: InfoController,
     NavigationTabController: NavigationTabController,
 
     Router: router,
