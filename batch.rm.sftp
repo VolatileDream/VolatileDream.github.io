@@ -8,7 +8,7 @@ rm *
 cd ../mixin
 rm *
 cd ..
-rm *
+rm app.js router.js
 cd ../lib/glyphicons
 rm *
 cd ..
