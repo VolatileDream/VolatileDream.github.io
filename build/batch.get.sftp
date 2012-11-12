@@ -1,4 +1,3 @@
-cd www
 get js/ctrlr/*		js/ctrlr/
 get js/view/*		js/view/
 get js/data/*		js/data/

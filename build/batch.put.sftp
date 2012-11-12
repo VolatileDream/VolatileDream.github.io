@@ -1,8 +1,6 @@
-cd www
 put js/data/*		js/data/
 put css/*			css/
 put template/*		template/
-put img/*			img/
 
 put js/mixin/*		js/mixin/
 put js/ctrlr/*		js/ctrlr/

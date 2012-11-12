@@ -1,4 +1,3 @@
-cd www
 cd js/ctrlr
 rm *
 cd ../view
