@@ -1,8 +1,5 @@
 require.config({
-  baseUrl: 'js',
-  paths: {
-    lib: '../lib'
-  }
+  baseUrl: 'js'
 });
 
 
@@ -22,7 +19,7 @@ requirejs([
   'ctrlr/NavigationTabController',
   'ctrlr/InfoController',
   // things we don't care about:
-	'lib/bootstrap'
+	'lib/bootstrap', 'lib/jquery'
 ],function(
   Ember, router,
   appView, appCtrlr,
@@ -32,9 +29,12 @@ requirejs([
   BlogView, BlogController,
   NavigationTabController,
   InfoController,
-  bootstrap
+  bootstrap, jquery
 ){
-  
+ 
+  // first, set some options for jquery ajax requests
+  jquery.ajax( { cache:true } );
+ 
   App = window.App = Em.Application.create({
     
     ApplicationController: appCtrlr,
