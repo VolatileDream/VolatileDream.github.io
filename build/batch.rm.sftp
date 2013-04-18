@@ -1,19 +1,4 @@
-cd js/ctrlr
-rm *
-cd ../view
-rm *
-cd ../data
-rm *
-cd ../mixin
-rm *
-cd ..
-rm app.js router.js
-cd ../lib/glyphicons
-rm *
-cd ..
-rm *
-cd ../css
-rm *
-cd ../template
-rm *
+rmdir css
+rmdir js
+rmdir template
 rm index.html

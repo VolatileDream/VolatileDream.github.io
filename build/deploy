@@ -22,10 +22,10 @@ function doDeploy(){
 
 	host="$1";
 
-	doSpellCheck ;
+#	doSpellCheck ;
 
 	file=`mktemp`
-	echo 'cd www' > "$file"
+	echo 'cd www/dev' > "$file"
 
 	if [[ -e ./build ]]; then
 		cat ./build/batch.put.sftp >> "$file"
@@ -34,9 +34,9 @@ function doDeploy(){
 		cat ./batch.put.sftp >> "$file"
 	fi
 
-	sftp -b "$file" "$host"
+	sftp -r -b "$file" "$host"
 
-	ssh "$host" "cd www; find . -exec chmod o+rx \{\} \;"
+	ssh "$host" "cd www; chmod o+rx -R *
 
 }
 
@@ -46,3 +46,4 @@ if [[ $# -lt 1 ]]; then
 fi
 
 doDeploy "$1"
+

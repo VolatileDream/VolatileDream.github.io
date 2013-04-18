@@ -1,10 +1,4 @@
-get js/ctrlr/*		js/ctrlr/
-get js/view/*		js/view/
-get js/data/*		js/data/
-get js/mixin/*		js/mixin/
-get js/*			js/
-get lib/*		lib/
-get lib/glyphicons/* lib/glyphicons/
-get css/*		css/
-get template/*		template/
-get index.html		index.html
+get js/
+get css/
+get template/
+get index.html

@@ -1,0 +1,29 @@
+{% import "navbar.html" as navigation %}
+<html>
+<head>
+	<title>Gianni Gambetti</title>
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+	<!-- Less -->
+	<link type='text/css' rel="stylesheet" href="css/style.css">
+	<!-- other libraries -->
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/bootstrap.js"></script>	
+	<!-- other libraries -->
+	{% block loadscripts %}{% endblock %}
+</head>
+<body>
+	{{ navigation.navbar( active_tab, nav_tabs, motto, mottoLink ) }}
+	<div class='container' id='content'>
+		<div class="hero-unit">
+			<h1>{{ pagetitle }}</h1>
+			<p>{{ tagline }}</p>
+		</div>
+	{% block content %}
+		Stuff
+	{% endblock %}
+	</div>
+	{% block runscripts %}{% endblock %}
+</body>
+</html>

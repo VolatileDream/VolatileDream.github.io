@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% set active_tab = 'contact' %}
+
+{% set pagetitle = 'Contact Me' %}
+{% set tagline = 'Getting in touch' %}
+
+{% block content %}
+<div class="row">
+	<div class="span6">
+		Need to get in touch? Here's where to find me.
+		<br>
+		As well as my <a href="/public-key.asc" title="GPG Key Fingerprint: 90C8 42FD 7D8E F1CA 25C7  63E2 6214 22E5 9C9F 9B75">GPG Key (0x9C9F9B75)</a>.
+		<br>
+		GPG Key Fingerprint: 90C8 42FD 7D8E F1CA 25C7  63E2 6214 22E5 9C9F 9B75
+	</div>
+</div>
+<br/>
+<div class="row centered">
+	{% for contact in contacts %}
+	<div class="span2">
+		<div class="card">
+			<a href="{{contact.link}}">
+				<div class="content">
+					<img
+						src="{{contact.logo.url}}"
+						width="{{contact.logo.width}}"
+						height="{{contact.logo.height}}"
+						alt="{{contact.name}}"></img>
+					<br>{{contact.tagline}}
+				</div>
+			</a>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+{% endblock %}

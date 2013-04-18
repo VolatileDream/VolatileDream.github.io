@@ -1,13 +1,4 @@
-put js/data/*		js/data/
-put css/*			css/
-put template/*		template/
-
-put js/mixin/*		js/mixin/
-put js/ctrlr/*		js/ctrlr/
-put js/view/*		js/view/
-put js/*			js/
-
+put js/
+put css/
+put template/
 put index.html		index.html
-
-put lib/*			lib/
-put lib/glyphicons/* lib/glyphicons/
