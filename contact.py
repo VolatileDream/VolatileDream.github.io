@@ -43,7 +43,7 @@ data['contacts'] = [
 	},
 	{
 		"logo":{
-			"url":"https://newsroom.fb.com/download-media/265/1",
+			"url":"//newsroom.fb.com/download-media/265/1",
 			"width":"64px",
 			"height":"64px"
 		},
@@ -52,7 +52,7 @@ data['contacts'] = [
 	},
 	{
 		"logo":{
-			"url":"https://octodex.github.com/images/original.jpg",
+			"url":"//octodex.github.com/images/original.jpg",
 			"width":"64px",
 			"height":"64px"
 		},

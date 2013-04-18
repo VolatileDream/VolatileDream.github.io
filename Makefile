@@ -11,7 +11,7 @@ css/style.css : css/*.less
 	nodejs $(LESS)/lessc css/style.less > css/style.css
 
 lib/base.js : lib/bootstrap.js lib/jquery.js
-	nodejs $(UGLIFY)/uglifyjs lib/bootstrap.js lib/jquery.js > lib/base.js
+	nodejs $(UGLIFY)/uglifyjs lib/jquery.js lib/bootstrap.js > lib/base.js
 
 clean :
 	-rm css/style.css lib/base.js *.pyc
