@@ -1,4 +1,0 @@
-rmdir css
-rmdir js
-rmdir template
-rm index.html
