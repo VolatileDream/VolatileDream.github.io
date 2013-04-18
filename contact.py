@@ -43,7 +43,7 @@ data['contacts'] = [
 	},
 	{
 		"logo":{
-			"url":"//newsroom.fb.com/download-media/265/1",
+			"url":"https://newsroom.fb.com/download-media/4406/2",
 			"width":"64px",
 			"height":"64px"
 		},
