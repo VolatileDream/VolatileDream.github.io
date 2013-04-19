@@ -11,7 +11,8 @@ built/base.css : css/*.less
 	nodejs $(LESS)/lessc css/style.less > built/base.css
 
 built/base.js : js/bootstrap.js js/jquery.js
-	nodejs $(UGLIFY)/uglifyjs js/jquery.js js/bootstrap.js > built/base.js
+	cat js/jquery.js js/bootstrap.js > /tmp/tmp.js
+	nodejs $(UGLIFY)/uglifyjs /tmp/tmp.js > built/base.js
 
 clean :
 	-rm built/base* *.pyc
