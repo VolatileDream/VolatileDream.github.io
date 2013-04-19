@@ -34,7 +34,7 @@ data['contacts'] = [
 	},
 	{
 		"logo": {
-			"url":"css/lib/glyphicons/399_e-mail.png",
+			"url":"built/glyphicons/399_e-mail.png",
 			"width":"60px",
 			"height":"60px"
 		},
