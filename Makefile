@@ -14,7 +14,7 @@ built/base.js : js/bootstrap.js js/jquery.js
 	nodejs $(UGLIFY)/uglifyjs js/jquery.js js/bootstrap.js > built/base.js
 
 clean :
-	-rm built/* *.pyc
+	-rm built/base* *.pyc
 
 .PHONY : all
 .PHONY : deploy
