@@ -19,21 +19,6 @@ def get_base_data():
 	return data;
 
 
-def output_page( name, data, content="text/html" ):
-	print "Content-Type: " + content
-	print # obligatory whitespace
-	print render_page( name, data )
-	
-
-def render_page( name, data ):
-
-	env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates'));
-
-	template = env.get_template( name + ".html" );
-
-	return template.render( data ); #variables
-
-
 nav_register( 'About', 'about', 'icon-user' );
 nav_register( 'Blog', 'blog', 'icon-list' );
 nav_register( 'Contact', 'contact', 'icon-envelope' );
