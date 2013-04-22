@@ -41,11 +41,5 @@ data['built_with'] = [
 data['shortbio'] = "Gianni Gambetti is a software developer, student, geek, anthropomorphiser of computers and privacy enthusiast.";
 
 # long biography version
-data['fullbio'] = """Gianni Gambetti is a software developer, that prefers to work with back 
-end systems and has a strong interest in artificial intelligence and distributed systems. 
-He's also currently studying for a Bachelor of Computer Science at the University of Waterloo, 
-which he is currently calling home. Every four months he likes a change of pace and switches 
-between studying and doing an internship through the Co-op program at UWaterloo.
-\nHe's a self proclaimed geek, who enjoys playing Dungeons and Dragons, as well as 
-reading science fiction and fantasy novels."""
+data['fullbio'] = """Gianni Gambetti is a software developer, that prefers to work with back end systems and has a strong interest in artificial intelligence and distributed systems. He's also currently studying for a Bachelor of Computer Science at the University of Waterloo, which he is currently calling home. Every four months he likes a change of pace and switches between studying and doing an internship through the Co-op program at UWaterloo.\nHe's a self proclaimed geek, who enjoys playing Dungeons and Dragons, as well as reading science fiction and fantasy novels."""
 
