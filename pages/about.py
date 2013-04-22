@@ -29,10 +29,12 @@ data['last_updated'] = "2013-03-03";
 data['built_with'] = [
 	{ "title":"LESS", "site":"http://lesscss.org", "description":"A dynamic style sheet language" }
 	,{ "title":"jQuery", "site":"http://jQuery.com", "description":"Multipurpose JavaScript library" }
+	,{ "title":"Flask", "site":"http://flask.pocoo.org/", "description":"An http micro framework for Python"}
 	,{ "title":"Jinja", "site":"http://jinja.pocoo.org/docs/", "description":"Full featured template engine for Python"}
+	,{ "title":"SQLAlchemy", "site":"http://www.sqlalchemy.org/", "description":"SQL database toolkit for Python"}
 	,{ "title":"timeago", "site":"http://timeago.yarp.com/", "description":"Fuzzy time stamp library for JavaScript" }
 	,{ "title":"glyphicons", "site":"http://glyphicons.com/", "description":"library of simple monochromatic icons" }
-	,{ "title":"Twitter Bootstrap", "site":"http://getbootstrap.com", "description":"Front end framework for web development" }
+	,{ "title":"Bootstrap", "site":"http://getbootstrap.com", "description":"Front end framework for web development" }
 ];
 
 # short biography
