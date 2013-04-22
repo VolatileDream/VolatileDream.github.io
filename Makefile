@@ -14,9 +14,10 @@ deploy : all static/base.css static/base.js *py
 static/base.css : css/*.less
 	nodejs $(LESS)/lessc css/style.less > static/base.css
 
-static/base.js : js/bootstrap.js js/jquery.js
-	cat js/jquery.js js/bootstrap.js > /tmp/tmp.js
+static/base.js : static/js/bootstrap.js static/js/jquery.js
+	cat static/js/jquery.js static/js/bootstrap.js > /tmp/tmp.js
 	nodejs $(UGLIFY)/uglifyjs /tmp/tmp.js > static/base.js
+	-rm /tmp/tmp.js
 
 clean :
 	-rm static/base* *.pyc */*.pyc
