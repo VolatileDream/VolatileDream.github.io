@@ -39,11 +39,12 @@ def get_page_data(post_id):
 	return data;
 
 @blog_page.route('/api/blog')
+@blog_page.route('/api/blog/')
 @blog_page.route('/api/blog/<int:post_id>')
 def json_url(post_id=None):
 	return json.dumps(get_page_data(post_id));
 
-
+@blog_page.route('/blog/')
 @blog_page.route('/blog')
 @blog_page.route('/blog/<int:post_id>')
 def html_url(post_id=None):

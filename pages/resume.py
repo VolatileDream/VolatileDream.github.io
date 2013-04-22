@@ -1,8 +1,24 @@
-#!/usr/bin/python
+import www_site
+from flask import Blueprint, render_template
+import json
 
-import www_site as site
+data = {};
 
-data = site.get_base_data();
+resume_page = Blueprint('resume', __name__);
+
+@resume_page.route('/api/resume')
+@resume_page.route('/api/resume/')
+def json_url():
+	return json.dumps(data);
+
+
+@resume_page.route('/resume/')
+@resume_page.route('/resume')
+def html_url():
+	page_data = www_site.get_base_data();
+	page_data.update( data );
+	return render_template("resume.html", **page_data);
+
 
 data['resume_sections'] = [
 	{
@@ -84,5 +100,3 @@ data['resume_sections'] = [
 		]
 	}
 ];
-
-site.output_page( 'resume', data );

@@ -1,17 +1,26 @@
+{% extends "base.html" %}
+
+{% set active_tab = 'blog' %}
+
+{% set pagetitle = 'My Blog' %}
+{% set tagline = "Some stuff that I've written about" %}
+
+{% block content %}
 <div class="row-fluid">
 	<div class="span2">
 		The Previous Posts:
 		<ul>
-			{{#each post in content}}
+			{% for post in post_list %}
 			<li>
-				<a {{action showPost post}} href="#">{{post.title}}</a>
+				<a href="/blog/{{post.id}}">{{post.title}}</a>
 			</li>
-			{{/each}}
+			{% endfor %}
 		</ul>
 	</div>
 	<div class="span8">
-		<h2>{{controller.currentPost.title}}</h2>
+		<h2>{{post.title}}</h2>
 		<br>
-		{{htmlEscape controller.currentPost.post}}
+		{{post.content|safe}}
 	</div>
 </div>
+{% endblock %}

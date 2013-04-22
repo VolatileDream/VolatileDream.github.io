@@ -1,8 +1,23 @@
-#!/usr/bin/python
+import www_site
+from flask import Blueprint, render_template
+import json
 
-import www_site as site
+data = {};
 
-data = site.get_base_data();
+contact_page = Blueprint('contact', __name__);
+
+@contact_page.route('/api/contact')
+@contact_page.route('/api/contact/')
+def json_url():
+	return json.dumps(data);
+
+
+@contact_page.route('/contact/')
+@contact_page.route('/contact')
+def html_url():
+	page_data = www_site.get_base_data();
+	page_data.update( data );
+	return render_template("contact.html", **page_data);
 
 data['contacts'] = [
 	{
@@ -34,7 +49,7 @@ data['contacts'] = [
 	},
 	{
 		"logo": {
-			"url":"built/glyphicons/399_e-mail.png",
+			"url":"static/glyphicons/399_e-mail.png",
 			"width":"60px",
 			"height":"60px"
 		},
@@ -60,5 +75,3 @@ data['contacts'] = [
 		"link":"https://github.com/jex"
 	}
 ];
-
-site.output_page( 'contact', data );

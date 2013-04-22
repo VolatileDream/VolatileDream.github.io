@@ -10,9 +10,12 @@ def get_data():
 	return data;
 
 @about_page.route('/api/about')
+@about_page.route('/api/about/')
 def json_url():
 	return json.dumps(get_data());
 
+@about_page.route('/')
+@about_page.route('/about/')
 @about_page.route('/about')
 def html_url():
 	merged_data = www_site.get_base_data();
