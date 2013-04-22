@@ -4,7 +4,7 @@ UGLIFY="/home/jex/.npm/uglify-js/1.3.4/package/bin"
 all : static/base.css static/base.js
 
 app : all
-	rm *.pyc */*.pyc
+	-rm *.pyc */*.pyc
 	python app.py
 
 deploy : all static/base.css static/base.js *py

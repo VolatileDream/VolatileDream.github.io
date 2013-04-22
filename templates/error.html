@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% set active_tab = 'error' %}
+
+{% set pagetitle = "Not Found" %}
+{% set tagline = "This isn't the page you're looking for..." %}
+
+{% block content %}
+<div class="error">
+	Oh no...that page doesn't exist.
+</div>
+{% endblock %}

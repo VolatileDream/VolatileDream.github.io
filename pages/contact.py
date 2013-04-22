@@ -49,7 +49,7 @@ data['contacts'] = [
 	},
 	{
 		"logo": {
-			"url":"static/glyphicons/399_e-mail.png",
+			"url":"/static/glyphicons/399_e-mail.png",
 			"width":"60px",
 			"height":"60px"
 		},

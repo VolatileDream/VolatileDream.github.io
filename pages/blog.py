@@ -33,6 +33,9 @@ def get_page_data(post_id):
 	else:
 		post = get_post(post_id)
 	
+	if post is None:
+		post = { "id": "err", "title": "Oops...", "content":"Looks like we couldn't find the post you're looking for." };
+
 	data = {};
 	data['post_list'] = post_list;
 	data['post'] = post;
