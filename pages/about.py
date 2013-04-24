@@ -1,4 +1,4 @@
-import www_site
+import navbar
 from flask import Blueprint, render_template
 import json
 
@@ -9,16 +9,11 @@ about_page = Blueprint('about', __name__);
 def get_data():
 	return data;
 
-@about_page.route('/api/about')
-@about_page.route('/api/about/')
-def json_url():
-	return json.dumps(get_data());
-
 @about_page.route('/')
 @about_page.route('/about/')
 @about_page.route('/about')
 def html_url():
-	merged_data = www_site.get_base_data();
+	merged_data = navbar.get_base_data();
 	merged_data.update( get_data() )
 	return render_template("about.html", **merged_data);
 
@@ -29,6 +24,7 @@ data['last_updated'] = "2013-04-22";
 data['built_with'] = [
 	{ "title":"LESS", "site":"http://lesscss.org", "description":"A dynamic style sheet language" }
 	,{ "title":"jQuery", "site":"http://jQuery.com", "description":"Multipurpose JavaScript library" }
+	,{ "title":"nicEdit", "site":"http://nicedit.com/", "description":"A minimal WYSIWYG HTML editor"}
 	,{ "title":"Flask", "site":"http://flask.pocoo.org/", "description":"An http micro framework for Python"}
 	,{ "title":"Jinja", "site":"http://jinja.pocoo.org/docs/", "description":"Full featured template engine for Python"}
 	,{ "title":"SQLAlchemy", "site":"http://www.sqlalchemy.org/", "description":"SQL database toolkit for Python"}

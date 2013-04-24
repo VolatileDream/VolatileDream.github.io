@@ -1,4 +1,4 @@
-import www_site
+import navbar
 from flask import Blueprint, render_template
 import json
 
@@ -6,16 +6,10 @@ data = {};
 
 resume_page = Blueprint('resume', __name__);
 
-@resume_page.route('/api/resume')
-@resume_page.route('/api/resume/')
-def json_url():
-	return json.dumps(data);
-
-
 @resume_page.route('/resume/')
 @resume_page.route('/resume')
 def html_url():
-	page_data = www_site.get_base_data();
+	page_data = navbar.get_base_data();
 	page_data.update( data );
 	return render_template("resume.html", **page_data);
 

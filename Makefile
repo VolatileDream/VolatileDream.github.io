@@ -5,7 +5,7 @@ all : static/base.css static/base.js
 
 app : all
 	-rm *.pyc */*.pyc
-	python app.py
+	. venv/bin/activate && python app.py
 
 deploy : all static/base.css static/base.js *py
 	echo "cd www/dev \n put *py \n put .htaccess \n put lib/ \n put built/ \n put templates/" | sftp -r glgambet@csclub.uwaterloo.ca

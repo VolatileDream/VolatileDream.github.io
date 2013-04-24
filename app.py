@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from Config import config
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask
 
 # blueprints
 from pages.about import about_page

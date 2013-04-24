@@ -1,4 +1,4 @@
-import www_site
+import navbar
 from flask import Blueprint, render_template
 import json
 
@@ -6,16 +6,10 @@ data = {};
 
 contact_page = Blueprint('contact', __name__);
 
-@contact_page.route('/api/contact')
-@contact_page.route('/api/contact/')
-def json_url():
-	return json.dumps(data);
-
-
 @contact_page.route('/contact/')
 @contact_page.route('/contact')
 def html_url():
-	page_data = www_site.get_base_data();
+	page_data = navbar.get_base_data();
 	page_data.update( data );
 	return render_template("contact.html", **page_data);
 
