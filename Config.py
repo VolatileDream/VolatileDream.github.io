@@ -2,5 +2,6 @@
 config = {
 	"db.location": "sqlite:///db/database.sqlite",
 	"DEBUG" : True,
-	"EDIT" : True
+	"EDIT" : True,
+	"ROOT" : ""
 };

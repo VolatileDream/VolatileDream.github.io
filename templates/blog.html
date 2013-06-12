@@ -12,7 +12,7 @@
 		<ul>
 			{% for post in post_list %}
 			<li>
-				<a href="/blog/{{post.id}}">{{post.title}}</a>
+				<a href="{{config.root}}/blog/{{post.id}}">{{post.title}}</a>
 			</li>
 			{% endfor %}
 		</ul>

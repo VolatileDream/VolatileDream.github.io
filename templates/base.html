@@ -1,4 +1,4 @@
-{% import "navbar.html" as navigation %}
+{% import "navbar.html" as navigation with context %}
 <html>
 <head>
 	<title>Gianni Gambetti</title>
@@ -6,8 +6,8 @@
 		name="viewport"
 		content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
 	<!-- default : compiled bootstrap + jquery + our stuff into 2 files -->
-	<link type='text/css' rel="stylesheet" href="/static/base.css">
-	<script type="text/javascript" src="/static/base.js"></script>
+	<link type='text/css' rel="stylesheet" href="{{config.root}}/static/base.css">
+	<script type="text/javascript" src="{{config.root}}/static/base.js"></script>
 	<!-- other libraries -->
 	{% block loadscripts %}{% endblock %}
 </head>

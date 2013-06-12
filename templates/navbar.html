@@ -17,7 +17,7 @@
           <!-- tab: {{t}} -->
           
           <li class="nav-element {% if tab.location == active_tab %}active{% endif %}" id="{{ tab.id }}">
-            <a href="/{{tab.location}}"><i class="{{tab.icon}}"></i>&nbsp;{{tab.name}}</a>
+            <a href="{{config.root}}/{{tab.location}}"><i class="{{tab.icon}}"></i>&nbsp;{{tab.name}}</a>
           </li>
           {% endfor %}
         </ul>
