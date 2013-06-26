@@ -1,4 +1,5 @@
 import navbar
+from werkzeug.contrib.atom import AtomFeed
 from flask import Blueprint, render_template, request, redirect, abort
 import json
 
@@ -9,7 +10,27 @@ from sqlalchemy.sql.expression import desc
 from db.base_db import engine, Session
 from db.BlogPost import BlogPost
 
+from urlparse import urljoin
+
 blog_page = Blueprint('blog', __name__);
+
+# Gets all the posts with their content
+def get_post_feed():
+	posts = None;
+	session = Session();
+	try:
+		query = session.query(BlogPost,
+			BlogPost.id,
+			BlogPost.title,
+			BlogPost.content,
+			BlogPost.updated);
+		ordered_query = query.order_by(BlogPost.id.desc());
+		posts = ordered_query.limit( config["blog.feed.post_limit"] ).all();
+	finally:
+		session.close();
+
+	return posts;
+
 
 def get_post_list():
 	session = Session();
@@ -44,6 +65,13 @@ def get_page_data(post_id):
 
 	return data;
 
+def post_url(post_id):
+	base = urljoin( request.url_root, config['ROOT'] + '/blog/' );
+	if post_id is None:
+		return base;
+	else:
+		return base + str(post_id);
+
 @blog_page.route('/blog/')
 @blog_page.route('/blog')
 @blog_page.route('/blog/<int:post_id>')
@@ -51,6 +79,22 @@ def show_post(post_id=None):
 	page_data = navbar.get_base_data();
 	page_data.update( get_page_data(post_id) );
 	return render_template("blog.html", **page_data);
+
+@blog_page.route('/blog/feed/')
+@blog_page.route('/blog/feed')
+def post_feed():
+	feed = AtomFeed('Recent Articles',
+		feed_url=request.url,
+		url=request.url_root );
+	for post in get_post_feed():
+		feed.add(post.title,
+			unicode(post.content),
+			content_type='html',
+			author='Gianni Gambetti',
+			url=post_url(post.id),
+			updated= post.updated );
+
+	return feed.get_response();
 
 @blog_page.route('/blog/new')
 @blog_page.route('/blog/<int:post_id>/edit')
