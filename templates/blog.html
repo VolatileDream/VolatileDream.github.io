@@ -5,6 +5,10 @@
 {% set pagetitle = 'My Blog' %}
 {% set tagline = "Some stuff that I've written about" %}
 
+{% block loadscripts %}
+	<script type="text/javascript" src="{{config.root}}/static/jquery.timeago.js"></script>
+{% endblock %}
+
 {% block content %}
 <div class="row-fluid">
 	<div class="span2">
@@ -19,8 +23,16 @@
 	</div>
 	<div class="span8">
 		<h2>{{post.title}}</h2>
+		{# Bleh...don't really like hard coding the fact it's utc time... #}
+		<h6>Updated <abbr class="timeago" title="{{post.updated}}Z">at {{post.updated}}</abbr></h6>
 		<br>
 		{{post.content|safe}}
 	</div>
 </div>
+{% endblock %}
+
+{% block runscripts %}
+	<script type="text/javascript">
+	$('abbr.timeago').timeago();
+	</script>
 {% endblock %}
