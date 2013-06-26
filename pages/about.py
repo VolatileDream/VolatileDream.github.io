@@ -18,7 +18,7 @@ def html_url():
 	return render_template("about.html", **merged_data);
 
 # last updated time
-data['last_updated'] = "2013-04-22";
+data['last_updated'] = "2013-06-25";
 
 # things that this was built with
 data['built_with'] = [

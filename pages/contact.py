@@ -66,6 +66,6 @@ data['contacts'] = [
 			"height":"64px"
 		},
 		"tagline":"on github",
-		"link":"https://github.com/jex"
+		"link":"https://github.com/VolatileDream"
 	}
 ];
