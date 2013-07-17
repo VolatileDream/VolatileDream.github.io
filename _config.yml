@@ -1,0 +1,19 @@
+title: Gianni Gambetti
+author: Gianni Gambetti
+motto: { 'text': 'non sum qualis eram', 'lang': 'lat', 'link': 'http://translate.google.com/?hl=en&tab=wT#la/en/non%20sum%20qualis%20eram'}
+url: '/'
+lastupdate: '2013-06-25'
+navigation: [
+	{'name': 'About', 'icon': 'icon-user', 'path':'about' }
+	,{'name': 'Blog', 'icon': 'icon-list', 'path':'blog' }
+	,{'name': 'Contact', 'icon': 'icon-envelope', 'path':'contact' }
+	,{'name': 'Resume', 'icon': 'icon-file', 'path':'resume' } ]
+
+builtwith: [
+	{ "title":"jekyll", "site":"http://jekyllrb.com/", "description":"A simple, static site generator"}
+	,{ "title":"LESS", "site":"http://lesscss.org", "description":"A dynamic style sheet language" }
+	,{ "title":"jQuery", "site":"http://jQuery.com", "description":"Multipurpose JavaScript library" }
+	,{ "title":"timeago", "site":"http://timeago.yarp.com/", "description":"Fuzzy time stamp library for JavaScript" }
+	,{ "title":"glyphicons", "site":"http://glyphicons.com/", "description":"library of simple monochromatic icons" }
+	,{ "title":"Bootstrap", "site":"http://getbootstrap.com", "description":"Front end framework for web development" }
+]

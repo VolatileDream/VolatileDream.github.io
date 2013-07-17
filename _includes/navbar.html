@@ -1,0 +1,34 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand">{{ site.author }}</a>
+      <a class="brand hidden-desktop" href='{{ site.motto.link }}'>
+        {{ site.motto.text }}
+      </a>
+      <button type="button"
+              class="btn btn-navbar pull-right"
+              data-toggle="collapse"
+              data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          {% for nav in site.navigation %}
+          <li class="nav-element {% if page.nav == nav.path %}active{% endif %}" id={{ nav.path }}>
+            <a href="{{ site.url }}{{ nav.path }}">
+              <i class="{{ nav.icon }}"></i>&nbsp;{{ nav.name }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="pull-right visible-desktop">
+        <a class="brand" href='{{ site.motto.link }}'>
+          {{ site.motto.text }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
