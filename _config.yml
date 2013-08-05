@@ -1,7 +1,7 @@
 title: Gianni Gambetti
 author: Gianni Gambetti
+exclude: [ 'Makefile' ]
 motto: { 'text': 'non sum qualis eram', 'lang': 'lat', 'link': 'http://translate.google.com/?hl=en&tab=wT#la/en/non%20sum%20qualis%20eram'}
-url: '/'
 lastupdate: '2013-06-25'
 navigation: [
 	{'name': 'About', 'icon': 'icon-user', 'path':'about' }

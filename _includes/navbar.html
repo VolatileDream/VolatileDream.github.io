@@ -17,7 +17,7 @@
         <ul class="nav">
           {% for nav in site.navigation %}
           <li class="nav-element {% if page.nav == nav.path %}active{% endif %}" id={{ nav.path }}>
-            <a href="{{ site.url }}{{ nav.path }}">
+            <a href="{{ site.baseurl }}/{{ nav.path }}/">
               <i class="{{ nav.icon }}"></i>&nbsp;{{ nav.name }}
             </a>
           </li>

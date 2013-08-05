@@ -1,157 +1,113 @@
 ---
 layout: bare
 nav: resume
-title: My Resume
+page_name: My Resume
 tagline: Where I've been, and what I've done
+sections: [
+	{
+		title: "Internships"
+		,id: "internship"
+		,subsections : [
+			{	title: "Bazaarvoice"
+				,id: "bv"
+				,url: "https://bazaarvoice.com"
+				,position: "Software Developer"
+				,dates: "2012-09 to 2012-12"
+				,points: [
+					"Worked with Connections team to develop client configuration service"
+					,"Trivially scaled to 100 requests per second"
+					,"Written in Python using Flask and Memcached"
+					,"Worked with Hadoop and Hive to measure unique traffic on peak days (black friday and cyber monday)"
+				]
+			},{
+				title: "Desire2Learn"
+				,id: "d2l2"
+				,url: "https://desire2learn.com"
+				,position: "Mobile Software Developer"
+				,dates: "2012-01 to 2012-05"
+				,points: [
+					"Developed for Android"
+					,"Primary developer on Grades integration module in Campus Life"
+					,"Developed in house Android web request caching solution"
+				]
+			},{
+				title: "Desire2Learn"
+				,id: "d2l1"
+				,url: "https://desire2learn.com"
+				,position: "Software Developer"
+				,dates: "2011-05 to 2011-11"
+				,points: [
+					"Refactored and improved Assignment Submission System middle layer"
+					,"Refactoring was required for Public facing API layer being developed"
+				]
+			},{
+				title: "Precidia"
+				,id: "precidia"
+				,url: "http://precidia.ca"
+				,position: "ePayments Productivity Student"
+				,dates: "2010-06 to 2010-09"
+				,points: [
+					"Design and creation of test plan for eCommerce site"
+					,"Organizational improvements to customer facing wiki for product setup"
+				]
+			}
+		]
+	},{
+		title: "Education"
+		,id: "education"
+		,subsections : [
+			{	title: "University of Waterloo"
+				,id: "uw"
+				,url: "https://uwaterloo.ca"
+				,position: "Bachelor of Computer Science"
+				,dates: "2010-09 to 2015 (expected)"
+				,points: [
+					"Orientation leader (Tie Guard) 2013"
+					,"Orientation leader (Head Black Tie) 2012"
+					,"Orientation leader (Black Tie) 2011"
+					,"Contributing writer to MathNews (Math Faculty student paper)"
+				]
+			},{	title: "Earl of March SS."
+				,id: "eom"
+				,url: "http://earlofmarch.com"
+				,position: "High School Diploma"
+				,dates: "2006-09 to 2010-06"
+				,points: [
+					"Member of the Ultimate Team"
+					,"Junior Band ( 2 years )"
+				]
+			}
+		]
+	}
+]
 ---
-<div class="resume">
-	<!-- intern -->	
-	<div class="row-fluid">
-		<div class="span12 section-title">
-			<h2>Internships</h2>
-		</div>
+{% for section in page.sections %}
+<div class="row-fluid" id='{{ section.id }}'>
+	<div class="span12 section-title">
+		<h2>{{ section.title }}</h2>
 	</div>
-
-	<!-- bv -->		
-	<div class="row-fluid sub-sections">
-		<div class="span3">
-			<h3 class="title"><a href="/resume/2012/09/01/bazaarvoice.html">Bazaarvoice</a></h3>
-		</div>
-		<div class="span6">
-			<h5 class="position">Software Developer</h5>
-		</diV>
-		<div class="span3">
-			<h6 class="dates">2012-09 to 2012-12</h6>
-		</div>
-	</div>
-	<div class="row-fluid points">
-		<div class="span12">
-			<ul>
-				<li>Worked with Connections team to develop client configuration service</li>
-				<li>Trivially scaled to 100 requests per second</li>
-				<li>Written in Python using Flask and Memcached</li>
-				<li>Worked with Hadoop and Hive to measure unique traffic on peak days (black friday and cyber monday)</li>
-			</ul>
-		</div>
-	</div>
-				
-	<!-- d2l -->
-	<div class="row-fluid sub-sections">
-		<div class="span3">
-			<h3 class="title"><a href="/resume/2012/01/01/d2l.html">Desire2Learn</a></h3>
-		</div>
-		<div class="span6">
-			<h5 class="position">Mobile Software Developer</h5>
-		</diV>
-		<div class="span3">
-			<h6 class="dates">2012-01 to 2012-05</h6>
-		</div>
-	</div>
-	<div class="row-fluid points">
-		<div class="span12">
-			<ul>
-				<li>Developed for Android</li>
-				<li>Primary developer on Grades integration module in Campus Life</li>
-				<li>Developed in house Android web request caching solution</li>
-			</ul>
-		</div>
-	</div>
-
-
-	<!-- d2l -->			
-	<div class="row-fluid sub-sections">
-		<div class="span3">
-			<h3 class="title"><a href="/resume/2011/11/01/d2l.html">Desire2Learn</a></h3>
-		</div>
-		<div class="span6">
-			<h5 class="position">Software Developer</h5>
-		</diV>
-		<div class="span3">
-			<h6 class="dates">2011-05 to 2011-11</h6>
-		</div>
-	</div>
-	<div class="row-fluid points">
-		<div class="span12">
-			<ul>
-				<li>Refactored and improved Assignment Submission System middle layer</li>
-				<li>Refactoring was required for Public facing API layer being developed</li>
-			</ul>
-		</div>
-	</div>
-	
-	<!-- precidia -->
-	<div class="row-fluid sub-sections">
-		<div class="span3">
-			<h3 class="title"><a href="/resume/2010/06/01/precidia.html">Precidia Technologies</a></h3>
-		</div>
-		<div class="span6">
-			<h5 class="position">ePayments Productivity Student</h5>
-		</diV>
-		<div class="span3">
-			<h6 class="dates">2010-06 to 2010-09</h6>
-		</div>
-	</div>
-	<div class="row-fluid points">
-		<div class="span12">
-			<ul>
-				<li>Design and creation of test plan for eCommerce site</li>
-				<li>Organizational improvements to customer facing wiki for product setup</li>
-			</ul>
-		</div>
-	</div>
-			
-		
-	<!-- education -->
-	<div class="row-fluid">
-		<div class="span12 section-title">
-			<h2>Education</h2>
-		</div>
-	</div>
-	
-	<!-- uwaterloo -->
-	<div class="row-fluid sub-sections">
-		<div class="span3">
-			<h3 class="title"><a href="/resume/2010/09/01/uwaterloo.html">University of Waterloo</a></h3>
-		</div>
-		<div class="span6">
-			<h5 class="position">Bachelor of Computer Science</h5>
-		</diV>
-		<div class="span3">
-			<h6 class="dates">2010-09 to 2015 (expected)</h6>
-		</div>
-	</div>
-	<div class="row-fluid points">
-		<div class="span12">
-			<ul>
-				<li>Orientation leader (Black Tie) 2011</li>
-				<li>Orientation leader (Head Black Tie) 2012</li>
-				<li>Orientation leader (Tie Guard) 2013</li>
-				<li>Contributing writer to MathNews (Math Faculty student paper)</li>
-			</ul>
-		</div>
-	</div>
-			
-	<!-- Earl of march -->
-	<div class="row-fluid sub-sections">
-		<div class="span3">
-			<h3 class="title">
-				<a href="/resume/2006/09/01/earlofmarch.html">Earl of March SS.</a>
-			</h3>
-		</div>
-		<div class="span6">
-			<h5 class="position">High School Diploma</h5>
-		</diV>
-		<div class="span3">
-			<h6 class="dates">2006-09 to 2010-06</h6>
-		</div>
-	</div>
-	<div class="row-fluid points">
-		<div class="span12">
-			<ul>
-				<li>Member of the Ultimate Team</li>
-				<li>Junior Band ( 2 years )</li>
-			</ul>
-		</div>
-	</div>
-			
 </div>
+	{% for sub in section.subsections %}
+	<div class="row-fluid sub-sections" id='{{ sub.id }}'>
+		<div class="span3">
+			<h3 class="title"><a href="{{ sub.url }}">{{ sub.title }}</a></h3>
+		</div>
+		<div class="span3">
+			<h5 class="position">{{ sub.position }}</h5>
+		</diV>
+		<div class="span3 hidden-phone"><!-- disappearing spacer div --></div>
+		<div class="span3">
+			<h6 class="dates">{{ sub.dates }}</h6>
+		</div>
+	</div>
+		{% if sub.points %}
+		<div class="row-fluid points">
+			<div class="span12">
+				<ul>
+					{% for p in sub.points %}<li>{{ p }}</li>{% endfor %}
+				</ul>
+			</div>
+		</div>
+		{% endif %}
+	{% endfor %}
+{% endfor %}

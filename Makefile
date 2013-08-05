@@ -3,8 +3,8 @@ UGLIFY="/home/jex/.npm/uglify-js/1.3.4/package/bin"
 
 REMOTE_ROOT='www/dev'
 
-app : all
-	cd build ; python -m SimpleHTTPServer 8080
+app : static/base.css static/base.js
+	jekyll serve -w
 
 all : static/base.css static/base.js build
 
@@ -26,7 +26,7 @@ static/base.js : _js/bootstrap.js _js/jquery.js
 
 clean :
 	-rm static/base*
-	-rm build/ -r
+	-rm _site/ -r
 
 .PHONY : all
 .PHONY : deploy

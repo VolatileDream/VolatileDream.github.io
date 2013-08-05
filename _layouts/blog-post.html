@@ -1,0 +1,45 @@
+---
+layout: bare
+nav: blog
+page_name: Blog
+tagline: Some stuff that I've written about
+---
+<div class="row-fluid">
+	{% if page.root_blog %}
+		{% assign post = site.posts.first %}
+		{% assign content = post.content %}
+	{% else %}
+		{% assign post = page %}
+	{% endif %}
+	<div class="span8 offset2">
+		<div>
+			{% if post.previous %}
+			<div class="pull-left"><a href="{{ site.baseurl }}{{ post.previous.url }}">
+					&lt;&lt;&nbsp;({{ post.previous.title }})
+			</a></div>
+			{% endif %}
+
+			{% if post.next %}
+			<div class="pull-right"><a href="{{ site.baseurl }}{{ post.next.url }}">
+					({{ post.next.title }})&nbsp;&gt;&gt;
+			</a></div>
+			{% endif %}
+		</div>
+		<br/>
+		<!-- {{ post }} -->
+		<h2>{{ post.title }}</h2>
+		<h6>Updated on {{ post.date | date_to_string }}</h6>
+		<div>
+			{{ content }}
+		</div>
+		<br/>
+	</div>
+	<div class="span2">
+		The Previous Posts:
+		<ul>
+			{% for post in site.posts %}
+			<li><a href="{{ post.url }}">{{ post.title }}</a>
+			{% endfor %}
+		</ul>
+	</div>
+</div>

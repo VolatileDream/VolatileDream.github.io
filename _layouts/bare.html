@@ -1,27 +1,27 @@
 <html>
 <head>
-	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+	<title>{% if page.page_name %}{{ page.page_name }} - {% endif %}{{ site.title }}</title>
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
 	<!-- default : compiled bootstrap + jquery + our stuff into 2 files -->
-	<link type='text/css' rel="stylesheet" href="{{ site.url }}static/base.css">
-	<script type="text/javascript" src="{{ site.url }}static/base.js"></script>
+	<link type='text/css' rel="stylesheet" href="{{ site.baseurl }}/static/base.css">
+	<script type="text/javascript" src="{{ site.baseurl }}/static/base.js"></script>
 	<!-- other libraries -->
 	{% for script in page.scripts %}
-	<script
-		type="{{ script.type }}"
-		src="{% if script.isrelative %}{{ site.url }}{% endif %}{{ script.url }}">
-	</script>
+	<script type="{{ script.type }}"
+		src="{% if script.isrelative %}{{ site.baseurl }}{% endif %}{{ script.url }}"></script>
 	{% endfor %}
 </head>
 <body>
   {% include navbar.html %}
   <div class='container' id='content'>
 		<div class="hero-unit">
-			<h1>{{ page.title }}</h1>
+			<h1>{{ page.page_name }}</h1>
 			<p>{{ page.tagline }}</p>
 		</div>
-    {{ content }}
+		<div class="{{ page.nav }}">
+    	{{ content }}
+    	</div>
 	</div>
 </body>
 </html>
