@@ -4,7 +4,7 @@ UGLIFY="/home/jex/.npm/uglify-js/1.3.4/package/bin"
 REMOTE_ROOT='www/dev'
 
 app : static/base.css static/base.js
-	jekyll serve -w
+	jekyll serve -w --baseurl ''
 
 all : static/base.css static/base.js build
 
