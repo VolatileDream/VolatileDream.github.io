@@ -14,16 +14,24 @@ tagline: Some stuff that I've written about
 	<div class="span8 offset2">
 		<div>
 			{% if post.previous %}
-			<div class="pull-left"><a href="{{ site.baseurl }}{{ post.previous.url }}">
-					&lt;&lt;&nbsp;({{ post.previous.title }})
-			</a></div>
+			<a href="{{ site.baseurl }}{{ post.previous.url }}">
+				&lt;&lt;&nbsp;({{ post.previous.title }})
+			</a>&nbsp;|
 			{% endif %}
+			
+			&nbsp;
+			<a href="{{site.baseurl}}{{ post.url }}">
+				permalink
+			</a>
+			&nbsp;
 
 			{% if post.next %}
-			<div class="pull-right"><a href="{{ site.baseurl }}{{ post.next.url }}">
-					({{ post.next.title }})&nbsp;&gt;&gt;
-			</a></div>
+			|&nbsp;
+			<a href="{{ site.baseurl }}{{ post.next.url }}">
+				({{ post.next.title }})&nbsp;&gt;&gt;
+			</a>
 			{% endif %}
+			
 		</div>
 		<br/>
 		<!-- {{ post }} -->
@@ -32,6 +40,7 @@ tagline: Some stuff that I've written about
 		<div>
 			{{ content }}
 		</div>
+		<br/>
 		<br/>
 	</div>
 	<div class="span2">
