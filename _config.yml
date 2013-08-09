@@ -17,3 +17,4 @@ builtwith: [
 	,{ "title":"glyphicons", "site":"http://glyphicons.com/", "description":"library of simple monochromatic icons" }
 	,{ "title":"Bootstrap", "site":"http://getbootstrap.com", "description":"Front end framework for web development" }
 ]
+baseurl: 
