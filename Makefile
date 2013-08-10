@@ -1,20 +1,11 @@
-LESS="/home/jex/.npm/less/1.3.3/package/bin"
-UGLIFY="/home/jex/.npm/uglify-js/1.3.4/package/bin"
+NPM_STORE=/home/jex/
+LESS="$(NPM_STORE)/.npm/less/1.3.3/package/bin"
+UGLIFY="$(NPM_STORE)/.npm/uglify-js/1.3.4/package/bin"
 
-REMOTE_ROOT='www/dev'
-
-app : static/base.css static/base.js
+serve: all
 	jekyll serve -w --baseurl ''
 
-all : static/base.css static/base.js build
-
-deploy : all
-	-echo "cd $(REMOTE_ROOT); mkdir db pages static templates" | ssh glgambet@csclub.uwaterloo.ca
-	echo "cd $(REMOTE_ROOT) \n put *py \n put db/* db/ \n put pages/* pages/ \n put static/* static/ \n put templates/* templates/ \n " | sftp -r glgambet@csclub.uwaterloo.ca
-	ssh glgambet@csclub.uwaterloo.ca "cd $(REMOTE_ROOT) ; chmod o+rx -R * ;"
-
-build : *html */*html */*/*html
-	jekyll build
+all : static/base.css static/base.js
 
 static/base.css : _css/*.less
 	nodejs $(LESS)/lessc _css/style.less > static/base.css
@@ -29,6 +20,5 @@ clean :
 	-rm _site/ -r
 
 .PHONY : all
-.PHONY : deploy
 .PHONY : clean
 
