@@ -5,9 +5,21 @@ page_name: My Resume
 tagline: Where I've been, and what I've done
 sections: [
 	{
-		title: "Internships"
-		,id: "internship"
+		title: "Experience"
+		,id: "experience"
 		,subsections : [
+			{	title: "Blueprint"
+				,id: "bp"
+				,url: "http://www.blueprintsys.com/"
+				,position: ".Net Developer"
+				,dates: "2013-05 to 2013-08"
+				,points: [
+					"Started putting in place localization best practices"
+					,"Worked with Rubik team to localize MS Visio import"
+					,"Worked with Rubik teom to determine a more flexible Z Ordering model for diagram editors"
+					,"Participated in daily team standups"
+				]
+			},
 			{	title: "Bazaarvoice"
 				,id: "bv"
 				,url: "https://bazaarvoice.com"
@@ -18,6 +30,7 @@ sections: [
 					,"Trivially scaled to 100 requests per second"
 					,"Written in Python using Flask and Memcached"
 					,"Worked with Hadoop and Hive to measure unique traffic on peak days (black friday and cyber monday)"
+					,"Participated in daily team standups"
 				]
 			},{
 				title: "Desire2Learn"
@@ -29,6 +42,7 @@ sections: [
 					"Developed for Android"
 					,"Primary developer on Grades integration module in Campus Life"
 					,"Developed in house Android web request caching solution"
+					,"Participated in daily team standups"
 				]
 			},{
 				title: "Desire2Learn"
@@ -89,13 +103,13 @@ sections: [
 </div>
 	{% for sub in section.subsections %}
 	<div class="row-fluid sub-sections" id='{{ sub.id }}'>
-		<div class="span3">
+		<div class="span4">
 			<h3 class="title"><a href="{{ sub.url }}">{{ sub.title }}</a></h3>
 		</div>
-		<div class="span3">
+		<div class="span4">
 			<h5 class="position">{{ sub.position }}</h5>
 		</diV>
-		<div class="span3 hidden-phone"><!-- disappearing spacer div --></div>
+		<div class="span1 hidden-phone"><!-- disappearing spacer div --></div>
 		<div class="span3">
 			<h6 class="dates">{{ sub.dates }}</h6>
 		</div>
