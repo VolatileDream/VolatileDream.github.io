@@ -96,27 +96,27 @@ sections: [
 ]
 ---
 {% for section in page.sections %}
-<div class="row-fluid" id='{{ section.id }}'>
-	<div class="span12 section-title">
+<div class="row" id='{{ section.id }}'>
+	<div class="col-md-12 section-title">
 		<h2>{{ section.title }}</h2>
 	</div>
 </div>
 	{% for sub in section.subsections %}
-	<div class="row-fluid sub-sections" id='{{ sub.id }}'>
-		<div class="span4">
+	<div class="row sub-sections" id='{{ sub.id }}'>
+		<div class="col-md-4">
 			<h3 class="title"><a href="{{ sub.url }}">{{ sub.title }}</a></h3>
 		</div>
-		<div class="span4">
+		<div class="col-md-4">
 			<h5 class="position">{{ sub.position }}</h5>
 		</diV>
-		<div class="span1 hidden-phone"><!-- disappearing spacer div --></div>
-		<div class="span3">
+		<div class="col-md-1 hidden-xs"><!-- disappearing spacer div --></div>
+		<div class="col-md-3">
 			<h6 class="dates">{{ sub.dates }}</h6>
 		</div>
 	</div>
 		{% if sub.points %}
-		<div class="row-fluid points">
-			<div class="span12">
+		<div class="row points">
+			<div class="col-md-12">
 				<ul>
 					{% for p in sub.points %}<li>{{ p }}</li>{% endfor %}
 				</ul>

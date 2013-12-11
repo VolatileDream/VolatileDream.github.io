@@ -3,10 +3,43 @@ layout: bare
 nav: contact
 page_name: Contact Me
 tagline: Getting in touch
+modes: [
+	{
+		'url': 'https://www.linkedin.com/in/giannigambetti'
+		, 'img_url': 'LinkedIn.png'
+		, 'alt': 'on LinkedIn'
+		, 'text': 'on LinkedIn'
+	},{
+		'url': 'https://github.com/VolatileDream'
+		, 'img_url': 'GitHub.jpg'
+		, 'alt': 'on GitHub'
+		, 'text': 'on GitHub'
+	},{
+		'url': 'mailto:glgambetti@csclub.uwaterloo.ca'
+		, 'img_url': '399_e-mail.png'
+		, 'alt': 'via Email'
+		, 'text': 'via Email'
+	},{ 
+		'url': 'https://twitter.com/volatiledream'
+		, 'img_url': 'Twitter.png'
+		, 'alt': '@VolatileDream on Twitter'
+		, 'text': 'on Twitter'
+	},{
+		'url': 'https://plus.google.com/+GianniGambetti'
+		, 'img_url': 'G+.png'
+		, 'alt': 'on Google+'
+		, 'text': 'on Google+'
+	},{
+		'url': 'https://facebook.com/VolatileDream'
+		, 'img_url': 'FB.png'
+		, 'alt': 'on facebook'
+		, 'text': 'on facebook'
+	}
+]
 ---
 <div class="contact">
 	<div class="row">
-		<div class="span6">
+		<div class="col-md-6">
 			Need to get in touch? Here's where to find me.
 			<br>
 			And just in case,
@@ -20,77 +53,17 @@ tagline: Getting in touch
 	</div>
 	<br/>
 	<div class="row centered">
-		<div class="span2"><div class="card">
-			<a href="https://www.linkedin.com/in/giannigambetti">
+		{% for mode in page.modes %}
+		<div class="col-md-2"><div class="card">
+			<a href="{{ mode.url }}">
 				<div class="content">
 					<img
-						src="https://developer.linkedin.com/sites/default/files/LinkedIn_Logo60px.png"
-						width="64px"
-						height="100%"
-						alt="on Linkedin"></img>
-					<br>on Linkedin
+						src="{{ site.baseurl }}/static/images/{{ mode.img_url }}" alt="{{ mode.alt }}"
+						width="64px" height="64px"></img>
+					<br>{{ mode.text }}
 				</div>
 			</a>
 		</div></div>
-		<div class="span2"><div class="card">
-			<a href="https://github.com/VolatileDream">
-				<div class="content">
-					<img
-						src="//octodex.github.com/images/original.jpg"
-						width="64px"
-						height="64px"
-						alt=""></img>
-					<br>on github
-				</div>
-			</a>
-		</div></div>
-		<div class="span2"><div class="card">
-			<a href="mailto:glgambetti@csclub.uwaterloo.ca">
-				<div class="content">
-					<img
-						src="{{ site.baseurl }}/static/glyphicons/399_e-mail.png"
-						width="60px"
-						height="60px"
-						alt=""></img>
-					<br>via email
-				</div>
-			</a>
-		</div></div>
-		<div class="span2"><div class="card">
-			<a href="https://twitter.com/volatiledream">
-				<div class="content">
-					<img
-						src="https://twitter.com/images/resources/twitter-bird-light-bgs.png"
-						width="64px"
-						height="64px"
-						alt="@volatiledream on Twitter"></img>
-					<br>@volatiledream on Twitter
-				</div>
-			</a>
-		</div></div>
-		<div class="span2"><div class="card">
-			<a href="https://plus.google.com/113067837896503448428">
-				<div class="content">
-					<img
-						src="https://ssl.gstatic.com/images/icons/gplus-64.png"
-						width="64px"
-						height="64px"
-						alt="on Google+"></img>
-					<br>on Google+
-				</div>
-			</a>
-		</div></div>
-		<div class="span2"><div class="card">
-			<a href="https://facebook.com/VolatileDream">
-				<div class="content">
-					<img
-						src="https://newsroom.fb.com/download-media/4406/2"
-						width="64px"
-						height="64px"
-						alt=""></img>
-					<br>on facebook
-				</div>
-			</a>
-		</div></div>
+		{% endfor %}
 	</div>
 </div>

@@ -1,34 +1,40 @@
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="{{site.baseurl}}/">{{ site.author }}</a>
-      <a class="brand hidden-desktop" href='{{ site.motto.link }}'>
-        {{ site.motto.text }}
-      </a>
-      <button type="button"
-              class="btn btn-navbar pull-right"
-              data-toggle="collapse"
-              data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <div class="nav-collapse collapse">
-        <ul class="nav">
-          {% for nav in site.navigation %}
-          <li class="nav-element {% if page.nav == nav.path %}active{% endif %}" id={{ nav.path }}>
-            <a href="{{ site.baseurl }}/{{ nav.path }}/">
-              <i class="{{ nav.icon }}"></i>&nbsp;{{ nav.name }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="pull-right visible-desktop">
-        <a class="brand" href='{{ site.motto.link }}'>
-          {{ site.motto.text }}
-        </a>
-      </div>
-    </div>
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.author }}</a>
+    <button type="button"
+            class="button navbar-toggle navbar-right"
+            data-toggle="collapse"
+            data-target="#navbar-list">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
   </div>
+
+  <div class="navbar-collapse collapse navbar-left" id="navbar-list">
+    <ul class="nav navbar-nav">
+
+      <li class="nav-element visible-xs">
+        <a href='{{ site.motto.link }}'>
+          <span class="glyphicon inverse glyphicon-link"></span>&nbsp;{{ site.motto.text }}
+        </a>
+      </li>
+
+      {% for nav in site.navigation %}
+      <li class="nav-element {% if page.nav == nav.path %}active{% endif %}" id="{{ nav.path }}">
+        <a href="{{ site.baseurl }}/{{ nav.path }}/">
+          <span class="glyphicon glyphicon-{{ nav.icon }}"></span>&nbsp;{{ nav.name }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="navbar-right hidden-xs">
+    <a class="navbar-brand" href='{{ site.motto.link }}'>
+      {{ site.motto.text }}
+    </a>
+  </div>
+
 </div>

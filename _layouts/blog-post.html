@@ -2,16 +2,16 @@
 layout: bare
 nav: blog
 page_name: Blog
-tagline: Some stuff that I've written about
+tagline: Stuff I've written about
 ---
-<div class="row-fluid">
+<div class="row">
 	{% if page.root_blog %}
 		{% assign post = site.posts.first %}
 		{% assign content = post.content %}
 	{% else %}
 		{% assign post = page %}
 	{% endif %}
-	<div class="span8 offset2">
+	<div class="col-md-8 col-md-offset-2">
 		<div>
 			{% if post.previous %}
 			<a href="{{ site.baseurl }}{{ post.previous.url }}">
@@ -43,7 +43,7 @@ tagline: Some stuff that I've written about
 		<br/>
 		<br/>
 	</div>
-	<div class="span2">
+	<div class="col-md-2">
 		The Previous Posts:
 		<ul>
 			{% for post in site.posts %}

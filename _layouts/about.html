@@ -6,9 +6,9 @@ page_name: About
 tagline: Who Am I?
 ---
 <div class="about">
-	<div class="row-fluid">
-		<div class="span2 hidden-phone"><!-- Awesome disappearing spacer div --></div>
-		<div class="span8">
+	<div class="row">
+		<div class="col-md-2 hidden-xs"><!-- Awesome disappearing spacer div --></div>
+		<div class="col-md-8">
 			<p>Hello! I'm Gianni Gambetti and this is my website. The information on this page may or may not be the most up to date, but it was updated <abbr class="timeago" title="{{site.lastupdate}}">on {{ site.lastupdate }}</abbr>. If for whatever reason you need something that's more up to date, <a href="{{ site.baseurl }}/contact/">send me a message</a>.
 			</p>
 			<!-- The abbr tag will be replaced with text that will always end in "ago" -->
@@ -22,11 +22,11 @@ tagline: Who Am I?
 			</blockquote>
 		</div>
 	</div>
-	<div class="row-fluid powered-by">
-		<div class="span12">
+	<div class="row powered-by">
+		<div class="col-md-12">
 			<h6>And a quick shout out to all of the tools and frameworks that help power this site!</h6>
 			{% for tech in site.builtwith %}
-				<div class="row-fluid">
+				<div class="row">
 					<a href="{{ tech.site }}">{{ tech.title }}</a> - {{ tech.description }}
 				</div>
 			{% endfor %}
