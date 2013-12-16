@@ -1,5 +1,25 @@
-function glgambet(userid, htmlid) {
+function search_app(userid, htmlid) {
   "use strict";
+
+  function loadTemplatesFrom(location, storeTemplates) {
+    var templates = [];
+
+    $.getJSON(location,
+      function (d) {
+        for (var key in d) {
+          //console.log(key);
+          if (d.hasOwnProperty(key)) {
+            if (typeof(d[key]) === 'object') {
+              templates[key] = d[key].join("\n");
+            } else {
+              templates[key] = d[key];
+            }
+          }
+        };
+        console.log("templates.load success!" + JSON.stringify(templates));
+        storeTemplates(templates);
+      }).fail(function() { console.log("error loading templates from " + location)});
+  }
 
   var states = {
     // initial loading state, before loading all courses
@@ -21,7 +41,7 @@ function glgambet(userid, htmlid) {
   };
 
   var throttle_div = $({});
-  var throttle_queue = "glgambet.ajax.throttle";
+  var throttle_queue = "search_app.ajax.throttle";
 
   // a bunch of stuff that we just so happen to need.
   var host = "./";
@@ -42,7 +62,7 @@ function glgambet(userid, htmlid) {
 
   function loadTemplates(){
     initCount++;
-    portal.loadTemplates(host + "templates.json",
+    loadTemplatesFrom(host + "templates.json",
     function (t) {
       templates = t;
       templates_loaded = true;
@@ -84,11 +104,11 @@ function glgambet(userid, htmlid) {
   }
 
   function register_external(key, func){
-    if( typeof(glgambet[key]) !== 'undefined'){
+    if( typeof(search_app[key]) !== 'undefined'){
       console.error("register_external: can't register: " + key);
       undefined();
     }
-    glgambet[key] = func;
+    search_app[key] = func;
   }
 
   // wrapper for Mustache that we need for twitter typeahead
@@ -451,7 +471,7 @@ function glgambet(userid, htmlid) {
     },
 
     initData: function(){
-      console.log("initializing glgambet model");
+      console.log("initializing model");
 
       // reset a few things
       this.selected_course(null);
@@ -511,7 +531,7 @@ function glgambet(userid, htmlid) {
 
   var prereqView = {
 
-    id: htmlid + " #glgambet_display",
+    id: htmlid + " #search_display",
 
     searchText: "Search",
 
@@ -669,10 +689,10 @@ function glgambet(userid, htmlid) {
 
   var loadingView = {
 
-    id: htmlid + " #glgambet_loading",
+    id: htmlid + " #search_loading",
 
     template: [
-      "<div id='glgambet_loading'>"
+      "<div id='search_loading'>"
       , "<div id='loading_message' />"
       , "<div class='progress progress-striped'>"
       ,   "<div class='progress-bar progress-bar-info' />"
@@ -716,7 +736,7 @@ function glgambet(userid, htmlid) {
 
   var searchView = {
 
-    id: htmlid + ' #glgambet_search',
+    id: htmlid + ' #search_search',
 
     typeaheadRegex : /^courses/,
 
@@ -829,13 +849,15 @@ function glgambet(userid, htmlid) {
       model._clear_data();
     });
 
-    glgambet.model = model;
-    glgambet.search = searchView;
+    search_app.model = model;
+    search_app.search = searchView;
+    search_app.prereq = prereqView;
+    search_app.loading = loadingView;
   };
 
   var on_start = function(){
     // Initialization
-    console.log("Initializing glgambet(" + userid + ", " + htmlid + ")");
+    console.log("Initializing search(" + userid + ", " + htmlid + ")");
 
     loadLib("jquery.storage.min.js");
     loadLib("typeahead.min.js");
