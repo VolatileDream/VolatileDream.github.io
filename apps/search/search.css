@@ -1,4 +1,13 @@
 
+body {
+  margin: 20px;
+}
+
+.cell {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
 /* general */
 
 #search_app {
