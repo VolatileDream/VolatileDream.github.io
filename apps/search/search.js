@@ -800,6 +800,12 @@ function search_app(userid, htmlid) {
         $(htmlid).html(frame);
 
         this.update_typeahead();
+
+	// transfer focus to the input field
+	// update this if this.id changes
+	var name = this.id + " #search_search_input";
+	console.log(name);
+	$(name).focus();
       }
 
       // they updated all courses, 
