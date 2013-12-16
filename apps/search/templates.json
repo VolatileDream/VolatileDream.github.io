@@ -1,0 +1,45 @@
+{
+
+	"display" : [
+		"<div id='glgambet_display'>"
+		, "<div id='nav' />"
+		, "<p id='name' type='text' class='form-control' disabled>"
+		,   "<strong>{{focused.subject}}{{focused.catalog_number}}</strong>"
+		,   " - {{focused.title}}"
+		, "</p>"
+		, "<p id='description'>{{focused.description}}</p>"
+		, "<div id='prereqs' />"
+		,"</div>"
+	],
+
+	"display_reqs" : [
+		"<p>Related Courses:</p>"
+		, "{{#courses}}"
+		,   "<a href='#' onclick='glgambet.prereq_clicked(\"{{subject}}{{catalog_number}}\")'>"
+		,     "{{subject}}{{catalog_number}} - {{title}}"
+		,   "</a><br>"
+		, "{{/courses}}"
+	],
+
+	"display_nav" : [
+		"<ol class='breadcrumb'>"
+		,   "{{#path}}"
+		,     "<li><a href='#' onclick='glgambet.nav_prereq(\"{{.}}\")'>"
+		,        "{{.}}"
+		,     "</a></li>"
+		,   "{{/path}}"
+		, "</ol>"
+	],
+
+	"search": [
+		"<div id='glgambet_search' class='row'>"
+		,	"<input id='glgambet_search_input' type='text' class='typeahead form-control' placeholder='Search for a course' >"
+		,	"<div class='middle'>Keep searching for courses</div>"
+		,"</div>"
+		],
+
+	"search_typeahead" : [
+		"<p>{{value}} - <strong>{{subject}}{{catalog_number}}</strong></p>"
+	]
+
+}
