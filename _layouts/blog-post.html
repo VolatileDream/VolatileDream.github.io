@@ -13,20 +13,21 @@ tagline: Stuff I've written about
 	{% endif %}
 	<div class="col-md-8 col-md-offset-2">
 		<div>
+
 			{% if post.previous %}
 			<a href="{{ site.baseurl }}{{ post.previous.url }}">
 				&lt;&lt;&nbsp;({{ post.previous.title }})
-			</a>&nbsp;|
+			</a>&nbsp;
 			{% endif %}
 			
-			&nbsp;
+			|&nbsp;
 			<a href="{{site.baseurl}}{{ post.url }}">
 				permalink
 			</a>
-			&nbsp;
+			&nbsp;|
 
 			{% if post.next %}
-			|&nbsp;
+			&nbsp;
 			<a href="{{ site.baseurl }}{{ post.next.url }}">
 				({{ post.next.title }})&nbsp;&gt;&gt;
 			</a>
