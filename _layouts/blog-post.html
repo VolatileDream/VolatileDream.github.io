@@ -15,7 +15,7 @@ tagline: Stuff I've written about
 		<div>
 
 			{% if post.previous %}
-			<a href="{{ site.baseurl }}{{ post.previous.url }}">
+			<a href="{{site.baseurl}}{{ post.previous.url }}">
 				&lt;&lt;&nbsp;({{ post.previous.title }})
 			</a>&nbsp;
 			{% endif %}
@@ -28,14 +28,14 @@ tagline: Stuff I've written about
 
 			{% if post.next %}
 			&nbsp;
-			<a href="{{ site.baseurl }}{{ post.next.url }}">
+			<a href="{{site.baseurl}}{{ post.next.url }}">
 				({{ post.next.title }})&nbsp;&gt;&gt;
 			</a>
 			{% endif %}
 			
 		</div>
 		<br/>
-		<!-- {{ post }} -->
+		
 		<h2>{{ post.title }}</h2>
 		<h6>Updated on {{ post.date | date_to_string }}</h6>
 		<div>
@@ -48,7 +48,7 @@ tagline: Stuff I've written about
 		The Previous Posts:
 		<ul>
 			{% for post in site.posts %}
-			<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+			<li><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
 			{% endfor %}
 		</ul>
 	</div>

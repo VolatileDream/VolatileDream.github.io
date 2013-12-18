@@ -5,12 +5,12 @@
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
 	<!-- default : compiled bootstrap + jquery + our stuff into 2 files -->
-	<link type='text/css' rel="stylesheet" href="{{ site.baseurl }}/static/base.css">
-	<script type="text/javascript" src="{{ site.baseurl }}/static/base.js"></script>
+	<link type='text/css' rel="stylesheet" href="{{site.baseurl}}/static/base.css">
+	<script type="text/javascript" src="{{site.baseurl}}/static/base.js"></script>
 	<!-- other libraries -->
 	{% for script in page.scripts %}
 	<script type="{{ script.type }}"
-		src="{% if script.isrelative %}{{ site.baseurl }}{% endif %}{{ script.url }}"></script>
+		src="{% if script.isrelative %}{{site.baseurl}}{% endif %}{{ script.url }}"></script>
 	{% endfor %}
 </head>
 <body>

@@ -8,12 +8,4 @@ navigation: [
 	,{'name': 'Blog', 'icon': 'list', 'path':'blog' }
 	,{'name': 'Contact', 'icon': 'envelope', 'path':'contact' }
 	,{'name': 'Resume', 'icon': 'file', 'path':'resume' } ]
-
-builtwith: [
-	{ "title":"jekyll", "site":"http://jekyllrb.com/", "description":"A simple, static site generator"}
-	,{ "title":"LESS", "site":"http://lesscss.org", "description":"A dynamic style sheet language" }
-	,{ "title":"jQuery", "site":"http://jQuery.com", "description":"Multipurpose JavaScript library" }
-	,{ "title":"timeago", "site":"http://timeago.yarp.com/", "description":"Fuzzy time stamp library for JavaScript" }
-	,{ "title":"glyphicons", "site":"http://glyphicons.com/", "description":"library of simple monochromatic icons" }
-	,{ "title":"Bootstrap", "site":"http://getbootstrap.com", "description":"Front end framework for web development" }
-]
+baseurl: http://volatiledream.github.io

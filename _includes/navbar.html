@@ -1,6 +1,6 @@
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="navbar-header">
-    <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.author }}</a>
+    <a class="navbar-brand" href="{{site.baseurl}}/">{{ site.author }}</a>
     <button type="button"
             class="button navbar-toggle navbar-right"
             data-toggle="collapse"
@@ -23,7 +23,7 @@
 
       {% for nav in site.navigation %}
       <li class="nav-element {% if page.nav == nav.path %}active{% endif %}" id="{{ nav.path }}">
-        <a href="{{ site.baseurl }}/{{ nav.path }}/">
+        <a href="{{site.baseurl}}/{{ nav.path }}/">
           <span class="glyphicon glyphicon-{{ nav.icon }}"></span>&nbsp;{{ nav.name }}
         </a>
       </li>
