@@ -56,7 +56,7 @@ One particular point of interest, we needed to give the operating system it's ow
 
 ### Virtual Memory
 
-I'll write about this later, as it deserves a post all to itself.
+This deserves a post all to itself, so I'll write about it later.
 
 [1]: /resume/#uw "About"
 [2]: https://www.student.cs.uwaterloo.ca/~cs350/ "CS350 - Operating Systems"
