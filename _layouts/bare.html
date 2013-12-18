@@ -12,6 +12,7 @@
 	<script type="{{ script.type }}"
 		src="{% if script.isrelative %}{{site.baseurl}}{% endif %}{{ script.url }}"></script>
 	{% endfor %}
+	<!-- Last updated: {{ site.time }} -->
 </head>
 <body>
   {% include navbar.html %}
