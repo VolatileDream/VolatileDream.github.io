@@ -33,7 +33,7 @@ builtwith: [
 	<div class="row powered-by">
 		<div class="col-md-12">
 			<h6>And a quick shout out to all of the tools and frameworks that help power this site!</h6>
-			{% for tech in site.builtwith %}
+			{% for tech in page.builtwith %}
 				<div class="row">
 					<a href="{{ tech.site }}">{{ tech.title }}</a> - {{ tech.description }}
 				</div>
