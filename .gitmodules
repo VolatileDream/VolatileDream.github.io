@@ -1,3 +1,3 @@
 [submodule "time-line"]
 	path = time-line
-	url = git@github.com:VolatileDream/time-line.git
+	url = https://github.com/VolatileDream/time-line.git
