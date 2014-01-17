@@ -3,7 +3,7 @@ LESS="$(NPM_STORE)/.npm/less/1.3.3/package/bin"
 UGLIFY="$(NPM_STORE)/.npm/uglify-js/1.3.4/package/bin"
 
 serve: all
-	jekyll serve -w --baseurl ''
+	jekyll --server --auto --base-url '' 
 
 all : static/base.css static/base.js
 
