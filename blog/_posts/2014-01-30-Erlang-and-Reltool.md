@@ -11,7 +11,7 @@ This is a collection of my notes on [Erlang][1] and [RelTool][2].
 
 #### High Performance Erlang (HiPE)
 
-The [HiPE module][3] for Erlang is built to attempt to speed up the erlang virtual machine by natively compiling part of the application and library code into native machine code. One of the issues with HiPE, is that there is currently a bug in HiPE that causes it to get compiled into standard Erlang even if flagged for exclusion. When flagged for exclusion RelTool has trouble generating correct node binaries, because you __must__ tell RelTool to exclude HiPE if you want your application to load correctly.
+The [HiPE module][3] for Erlang is built to attempt to speed up the erlang virtual machine by compiling part of the application and library code into native machine code. One of the issues with HiPE, is that there is currently a bug in HiPE that causes it to get compiled into standard Erlang even if flagged for exclusion. When flagged for exclusion RelTool has trouble generating correct node binaries, because you __must__ tell RelTool to exclude HiPE if you want your application to load correctly.
 
 Add the following in your reltool.config: `{app, hipe, [ {incl_cond, exclude} ] }`. If rebar complains that `"Application hipe is used in release {your_app}  and cannot be excluded"` then either your application, or one of it's dependencies depends on HiPE, and you need to be using a version of Erlang that was compiled for HiPE support. 
 
