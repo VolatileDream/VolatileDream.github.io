@@ -1,2 +1,3 @@
 static/base.*
 build/
+/.tup

@@ -1,0 +1,7 @@
+NPM_STORE=/home/jex
+LESS="$(NPM_STORE)/.npm/less/1.3.3/package/bin/lessc"
+UGLIFY="$(NPM_STORE)/.npm/uglify-js/1.3.4/package/bin/uglifyjs"
+
+: _js/*js |> nodejs $(UGLIFY) %f > %o |> static/base.js
+
+: _css/*less |> nodejs $(LESS) _css/style.less > %o |> static/base.css
