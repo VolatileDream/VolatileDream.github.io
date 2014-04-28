@@ -1,9 +1,9 @@
-serve: all
+serve: tup
 	jekyll --server --auto --base-url '' 
 
-all : 
+tup : 
 	tup upd
 
-.PHONY : all
+.PHONY : tup
 .PHONY : serve
 
