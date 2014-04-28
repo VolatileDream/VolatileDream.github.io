@@ -1,3 +1,4 @@
 static/base.*
 build/
 /.tup
+/_site
