@@ -8,5 +8,7 @@ navigation: [
     ,{'name': 'Blog', 'icon': 'list', 'path':'blog' }
     ,{'name': 'Contact', 'icon': 'envelope', 'path':'contact' }
     ,{'name': 'Resume', 'icon': 'file', 'path':'resume' } ]
-baseurl: //volatiledream.github.io
 
+
+baseurl: //volatiledream.github.io
+markdown: kramdown
