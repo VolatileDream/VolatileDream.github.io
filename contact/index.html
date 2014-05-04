@@ -6,7 +6,7 @@ tagline: Getting in touch
 modes: [
 	{
 		'url': 'https://www.linkedin.com/in/giannigambetti'
-		, 'img_url': 'LinkedIn.png'
+		, 'img_url': 'LI.png'
 		, 'alt': 'on LinkedIn'
 		, 'text': 'on LinkedIn'
 	},{
@@ -21,7 +21,7 @@ modes: [
 		, 'text': 'via Email'
 	},{ 
 		'url': 'https://twitter.com/volatiledream'
-		, 'img_url': 'Twitter.png'
+		, 'img_url': 'T.png'
 		, 'alt': '@VolatileDream on Twitter'
 		, 'text': 'on Twitter'
 	},{
@@ -58,7 +58,7 @@ modes: [
 			<a href="{{ mode.url }}">
 				<div class="content">
 					<img
-						src="{{site.baseurl}}/static/images/{{ mode.img_url }}" alt="{{ mode.alt }}"
+						src="{{site.baseurl}}/static/images/{{mode.img_url}}" alt="{{ mode.alt }}"
 						width="64px" height="64px"></img>
 					<br>{{ mode.text }}
 				</div>
