@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-tags: []
+tags: [ 'uwaterloo' ]
 title: "UW Course Search"
 ---
 
