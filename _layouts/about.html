@@ -17,16 +17,22 @@ builtwith: [
 	<div class="row">
 		<div class="col-md-2 hidden-xs"><!-- Awesome disappearing spacer div --></div>
 		<div class="col-md-8">
+			<!--
+				The abbr tag will be replaced with text that will always end in "ago".
+				If it is not removed the "on {{ site.lastupdate }}" will look like:
+				"on 2014-09-21"
+			 -->
 			<p>Hello! I'm Gianni Gambetti and this is my website. The information on this page may or may not be the most up to date, but it was updated <abbr class="timeago" title="{{site.lastupdate}}">on {{ site.lastupdate }}</abbr>. If for whatever reason you need something that's more up to date, <a href="{{site.baseurl}}/contact/">send me a message</a>.
 			</p>
-			<!-- The abbr tag will be replaced with text that will always end in "ago" -->
 			As quickly as possible, this is who I am:
 			<blockquote>
 				Gianni Gambetti is a software developer, <a href="{{site.baseurl}}/resume#education">student</a>, geek, anthropomorphiser of computers and privacy enthusiast.
 			</blockquote>
 			And here are all the details:
 			<blockquote>
-				Gianni Gambetti is a software developer, that prefers to work with back end systems and has a strong interest in security and distributed systems. He's also currently studying for a <a href="{{site.baseurl}}/resume#uw">Bachelor of Computer Science at the University of Waterloo</a>, which he is currently calling home. Every four months he likes a change of pace and switches between studying and doing an internship through the co-op program at UWaterloo. He's a self proclaimed geek, who enjoys playing tabletop RPGs, as well as reading science fiction and fantasy novels.
+				Gianni Gambetti is a software developer, interested in working in security, embedded, and distributed systems.
+				He's also currently studying for a <a href="{{site.baseurl}}/resume#uw">Bachelor of Computer Science at the University of Waterloo</a>, which he is currently calling home.
+				He's a self proclaimed geek, who enjoys playing tabletop Role Playing Games (RPGs), as well as reading science fiction and fantasy novels.
 			</blockquote>
 		</div>
 	</div>

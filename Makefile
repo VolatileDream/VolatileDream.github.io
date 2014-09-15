@@ -1,9 +1,11 @@
-serve: tup
-	jekyll --server --auto --base-url '' 
+jekyll: tup
+	jekyll --base-url '' 
 
 tup : 
 	tup
 
-.PHONY : tup
-.PHONY : serve
+serve: jekyll
+	cd _site ; python -m "SimpleHTTPServer" 4000
+
+.PHONY : tup serve jekyll
 
