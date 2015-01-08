@@ -28,7 +28,7 @@ As I've participated in more communities online, I find myself building a sort o
 
 An obvious example would be dating sites or apps: while you might not advertise your dating profile on Facebook, after meeting someone you direct them to that account, and others from there.
 
-I doubt I'm alone in this practice, because I think there's an inherent intimacy and vulnerability in presenting your entire online self to someone, awkward dating profiles, private Tumblr blog, and all.
+I doubt I'm alone in this practice, because I think there's an inherent intimacy and vulnerability in presenting your entire online self to someone, awkward dating profiles, private Tumblr blog, and all. This site is currently the extent to which I show off the various fragments of my life, starting with a slightly witty [About Me][11] page, and ending in more a more factual and technical series of [blog posts][12].
 
 Such is the life of a "digital native", navigating the choppy flow of bits and bytes as they carry our various life fragments around.
 
@@ -42,4 +42,6 @@ Such is the life of a "digital native", navigating the choppy flow of bits and b
 [8]: {{ site.baseurl }}/contact/
 [9]: https://www.linkedin.com/
 [10]: https://en.wikipedia.org/wiki/Graph_%28mathematics%29
+[11]: {{ site.baseurl }}/about/
+[12]: {{ site.baseurl }}/blog/
 
