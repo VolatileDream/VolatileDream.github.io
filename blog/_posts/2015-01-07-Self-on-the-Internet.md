@@ -28,9 +28,9 @@ As I've participated in more communities online, I find myself building a sort o
 
 An obvious example would be dating sites or apps: while you might not advertise your dating profile on Facebook, after meeting someone you direct them to that account, and others from there.
 
-I doubt I'm alone in this practice, because I think there's an inherent intimacy in presenting your entire online self to someone, awkward dating profiles, private Tumblr blog, and all.
+I doubt I'm alone in this practice, because I think there's an inherent intimacy and vulnerability in presenting your entire online self to someone, awkward dating profiles, private Tumblr blog, and all.
 
-Such is the life of a "digital native", navigating the choppy flow of bits and bytes as they carry our various bits of self around.
+Such is the life of a "digital native", navigating the choppy flow of bits and bytes as they carry our various life fragments around.
 
 [1]: https://en.wikipedia.org/wiki/World_Wide_Web
 [2]: http://www.neopets.com/
