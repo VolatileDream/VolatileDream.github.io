@@ -37,33 +37,31 @@ modes: [
 	}
 ]
 ---
-<div class="contact">
-	<div class="row">
-		<div class="col-md-6">
-			Need to get in touch? Here's where to find me.
-			<br class="hidden-xs">
-			And just in case,
-			<a
-				href="{{site.baseurl}}/static/public-key.asc"
-				title="GPG Key Fingerprint: 90C8 42FD 7D8E F1CA 25C7  63E2 6214 22E5 9C9F 9B75">
-				my GPG Key
-			</a> with fingerprint:
-			<br class="hidden-xs">90C8 42FD 7D8E F1CA 25C7  63E2 6214 22E5 9C9F 9B75
-		</div>
+<div class="row">
+	<div class="col-md-6">
+		Need to get in touch? Here's where to find me.
+		<br class="hidden-xs">
+		And just in case,
+		<a
+			href="{{site.baseurl}}/static/public-key.asc"
+			title="GPG Key Fingerprint: 90C8 42FD 7D8E F1CA 25C7  63E2 6214 22E5 9C9F 9B75">
+			my GPG Key
+		</a> with fingerprint:
+		<br class="hidden-xs">90C8 42FD 7D8E F1CA 25C7  63E2 6214 22E5 9C9F 9B75
 	</div>
-	<br/>
-	<div class="row centered">
-		{% for mode in page.modes %}
-		<div class="col-md-2"><div class="card">
-			<a href="{{ mode.url }}">
-				<div class="content">
-					<img
-						src="{{site.baseurl}}/static/images/{{mode.img_url}}" alt="{{ mode.alt }}"
-						width="64px" height="64px"></img>
-					<br>{{ mode.text }}
-				</div>
-			</a>
-		</div></div>
-		{% endfor %}
-	</div>
+</div>
+<br/>
+<div class="row centered">
+	{% for mode in page.modes %}
+	<div class="col-md-2"><div class="card">
+		<a href="{{ mode.url }}">
+			<div class="content">
+				<img
+					src="{{site.baseurl}}/static/images/{{mode.img_url}}" alt="{{ mode.alt }}"
+					width="64px" height="64px"></img>
+				<br>{{ mode.text }}
+			</div>
+		</a>
+	</div></div>
+	{% endfor %}
 </div>
