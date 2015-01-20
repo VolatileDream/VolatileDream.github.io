@@ -3,7 +3,7 @@ layout: blog-post
 tags: [ 'engl108d', 'uwaterloo', 'me', "paper review" ]
 subtitle: Presentation of Self in Everyday Life for ENGL108D
 
-img-steve: /static/images/blog/2015-01-10-scumbag-steve.jpg
+img-steve: /static/blog/2015-01-10-scumbag-steve.jpg
 ---
 
 As part of courses this term, I have a few courses for which I'm doing readings each week. For English-108D, this week we read [Goffman's The Presentation of Self in Everyday Life][2] and [Managing Impressions Online: Self-Presentation Processes in the Online Dating Environment (Ellison, Heino, and Gibbs)][1]. Both pieces touch on the topic of people not being entirely themselves depending on varying social contexts, whether it's online dating, or approaching members of a tightly knit social circle.
