@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/volatiledream
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://volatiledream.github.io
+  * I am volatiledream (https://keybase.io/volatiledream) on keybase.
+  * I have a public key ASDGX_L6ZkUjiTW7grAVmQLvoXjvJXtC89gssJnxKvNRAwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012088bd274f1cedafca8e6d22b5bec35d20c3143824307e454ae279f024162a41ea0a",
+      "host": "keybase.io",
+      "kid": "0120c65ff2fa6645238935bb82b0159902efa178ef257b42f3d82cb099f12af351030a",
+      "uid": "9d6ce5a75a21d35b120708cc818ff219",
+      "username": "volatiledream"
+    },
+    "merkle_root": {
+      "ctime": 1523434154,
+      "hash": "a73c88bc8427d306afaf698a83f36a9e3a21b354e311a2d00750475878cff2d8c5fb3311e1ea16846c31d3f946fe3724065e5ec51814e0d7431aa141d729def1",
+      "hash_meta": "d35348ac3eba6dbc28bc9bdea5e6a92d42e0404cdaedcaa1e4c6382078bb73a2",
+      "seqno": 2369325
+    },
+    "service": {
+      "entropy": "D6BO2BU8myfA9+pN+aA+WbUm",
+      "hostname": "volatiledream.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.47"
+  },
+  "ctime": 1523434170,
+  "expire_in": 504576000,
+  "prev": "ee101df0d944138f57be0d6848d17ccd6baa18ddec368f3a8dfd7825db0cb5ec",
+  "seqno": 14,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgxl/y+mZFI4k1u4KwFZkC76F47yV7QvPYLLCZ8SrzUQMKp3BheWxvYWTESpcCDsQg7hAd8NlEE49Xvg1oSNF8zWuqGN3sNo86jf14JdsMtezEICF1SgkkQ9hdi9XgLBhHaXoS0FqrhS80sK0YFpAdLtB1AgHCo3NpZ8RAuBqUWig9WA0K57Tmm6rW00fJpN9U+DM+3aVpHRc5Uk+yiatJ6jDPrp8XFTvmrvj20deRE/fbOsDAGW/uqYvvA6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMouRRqlKjsJTRRy6TtHfy0eQnepbB4gSsdMexRiCayro3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/volatiledream
+
+==================================================================
