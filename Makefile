@@ -1,5 +1,5 @@
 jekyll: tup
-	jekyll --base-url '' 
+	jekyll serve --verbose --baseurl '' --watch --trace --incremental
 
 tup : 
 	tup
