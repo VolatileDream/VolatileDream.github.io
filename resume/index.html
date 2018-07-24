@@ -110,32 +110,19 @@ sections: [
 ]
 ---
 {% for section in page.sections %}
-<div class="row" id='{{ section.id }}'>
-	<div class="col-md-12 section-title">
+<div id='{{ section.id }}'>
 		<h2>{{ section.title }}</h2>
+  {% for sub in section.subsections %}
+	<div id='{{ sub.id }}'>
+		<h3><a href="{{ sub.url }}">{{ sub.title }}</a></h3>
+		<h5>{{ sub.position }}</h5>
+		<h6>{{ sub.dates }}</h6>
 	</div>
+	{% if sub.points %}
+		<ul>
+			{% for p in sub.points %}<li>{{ p }}</li>{% endfor %}
+		</ul>
+	{% endif %}
+  {% endfor %}
 </div>
-	{% for sub in section.subsections %}
-	<div class="row sub-sections" id='{{ sub.id }}'>
-		<div class="col-md-4">
-			<h3 class="title"><a href="{{ sub.url }}">{{ sub.title }}</a></h3>
-		</div>
-		<div class="col-md-4">
-			<h5 class="position">{{ sub.position }}</h5>
-		</diV>
-		<div class="col-md-1 hidden-xs"><!-- disappearing spacer div --></div>
-		<div class="col-md-3">
-			<h6 class="dates">{{ sub.dates }}</h6>
-		</div>
-	</div>
-		{% if sub.points %}
-		<div class="row points">
-			<div class="col-md-12">
-				<ul>
-					{% for p in sub.points %}<li>{{ p }}</li>{% endfor %}
-				</ul>
-			</div>
-		</div>
-		{% endif %}
-	{% endfor %}
 {% endfor %}

@@ -7,26 +7,39 @@
 	<link rel=alternate type=application/atom+xml title="Gianni's Blog" href={{site.baseurl}}/atom.xml>
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
-	<!-- default : compiled bootstrap + jquery + our stuff into 2 files -->
-	<link type='text/css' rel="stylesheet" href="{{site.baseurl}}/static/base.css">
-	<script type="text/javascript" src="{{site.baseurl}}/static/base.js"></script>
-	<!-- other libraries -->
-	{% for script in page.scripts %}
-	<script type="{{ script.type }}"
-		src="{% if script.isrelative %}{{site.baseurl}}{% endif %}{{ script.url }}"></script>
-	{% endfor %}
+  <style type="text/css">
+    body {
+      margin: 40px auto;
+      max-width: 750px;
+      line-height: 1.6;
+      font-size: 18px;
+      background-color: #EEEEEE;
+      padding: 0 10px;
+    }
+    .navbar {
+      top: 0;
+      position: sticky;
+      background-color: #DDDDDD;
+      padding: 0 10px;
+    }
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    blockquote {
+      padding-left: 10px;
+      border-left: 3px solid #555555;
+    }
+  </style>
 	<!-- Last updated: {{ site.time }} -->
 </head>
 <body>
   {% include navbar.html %}
-  <div class='container' id='content'>
-		<div class="jumbotron">
-			<h1>{{ name }}</h1>
-			<p>{{ tagline }}</p>
-		</div>
-		<div class="{{ page.nav }}">
-    	{{ content }}
-    	</div>
-	</div>
+	<h1>{{ name }}</h1>
+	<p>{{ tagline }}</p>
+	<div class="{{ page.nav }}">
+   	{{ content }}
+ 	</div>
 </body>
 </html>

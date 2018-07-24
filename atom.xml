@@ -13,15 +13,13 @@ layout: nil
    <name>{{ site.author }}</name>
    <email>{{ site.email }}</email>
  </author>
-
  {% for post in site.posts %}
- <entry>
+  <entry>
    <title>{{ post.title }}</title>
    <link href="{{site.baseurl}}{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{site.baseurl}}{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
- </entry>
+  </entry>
  {% endfor %}
- 
 </feed>

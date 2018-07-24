@@ -1,13 +1,12 @@
 title: Gianni Gambetti
 author: Gianni Gambetti
 exclude: [ 'Makefile', '.gitignore', 'Tupfile', '.gitmodules' ]
-motto: { 'text': 'non sum qualis eram', 'lang': 'lat', 'link': 'http://translate.google.com/?hl=en&tab=wT#la/en/non%20sum%20qualis%20eram'}
-lastupdate: '2015-11-15'
+lastupdate: '2015/11/15'
 navigation: [
-    {'name': 'About', 'icon': 'user', 'path':'about' }
-    ,{'name': 'Blog', 'icon': 'list', 'path':'blog' }
-    ,{'name': 'Contact', 'icon': 'envelope', 'path':'contact' }
-    ,{'name': 'Resume', 'icon': 'file', 'path':'resume' } ]
+    {'name': 'About', 'path':'about' }
+    ,{'name': 'Blog', 'path':'blog' }
+    ,{'name': 'Contact', 'path':'contact' }
+    ,{'name': 'Resume', 'path':'resume' } ]
 
 
 baseurl: //volatiledream.github.io

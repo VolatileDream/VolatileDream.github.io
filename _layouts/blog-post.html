@@ -4,59 +4,42 @@ nav: blog
 page_name: Blog
 tagline: Stuff I've written about
 ---
-<div class="row">
-	{% if page.root_blog %}
-		{% assign post = site.posts.first %}
-		{% assign content = post.content %}
-	{% else %}
-		{% assign post = page %}
+{% if page.root_blog %}
+	{% assign post = site.posts.first %}
+	{% assign content = post.content %}
+{% else %}
+	{% assign post = page %}
+{% endif %}
+<h2>{{ post.title }}</h2>
+{% if post.subtitle %}
+  <h4>{{ post.subtitle }}</h4>
+{% endif %}
+<h6 class=menu>Updated on {{ post.date | date_to_string }}
+	<a href="{{site.baseurl}}{{ post.url }}">permalink</a>
+</h6>
+<div class=menu>
+	{% if post.previous %}
+		<a href="{{site.baseurl}}{{ post.previous.url }}">&lt;&lt;&nbsp;({{ post.previous.title }})</a>
+  {% else %}
+    &nbsp;
 	{% endif %}
-	<div class="col-md-8 col-md-offset-2">
-		<div>
-
-			{% if post.previous %}
-			<a href="{{site.baseurl}}{{ post.previous.url }}">
-				&lt;&lt;&nbsp;({{ post.previous.title }})
-			</a>&nbsp;
-			{% endif %}
-			
-			|&nbsp;
-			<a href="{{site.baseurl}}{{ post.url }}">
-				permalink
-			</a>
-			&nbsp;|
-
-			{% if post.next %}
-			&nbsp;
-			<a href="{{site.baseurl}}{{ post.next.url }}">
-				({{ post.next.title }})&nbsp;&gt;&gt;
-			</a>
-			{% endif %}
-			
-		</div>
-		<br/>
-		
-		<h2>{{ post.title }}</h2>
-		{% if post.subtitle %}
-		<h4>{{ post.subtitle }}</h4>
-		{% endif %}
-		<h6>Updated on {{ post.date | date_to_string }}</h6>
-		<hr/>
-		<div>
-			{{ content }}
-		</div>
-		<br/>
-		<br/>
-	</div>
-	<div class="col-md-2">
-		The Previous Posts:
-		<ul>
-			{% for post in site.posts %}
-			<li><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
-			{% endfor %}
-		</ul>
-		<a href="{{site.baseurl}}/atom.xml">
-			<img src="{{site.baseurl}}/static/images/feed-icon-14x14.png"/>
-		</a>
-	</div>
+	{% if post.next %}
+		<a href="{{site.baseurl}}{{ post.next.url }}">({{ post.next.title }})&nbsp;&gt;&gt;</a>
+  {% else %}
+    &nbsp;
+	{% endif %}
 </div>
+<hr/>
+<div>
+	{{ content }}
+</div>
+<hr/>
+Previously Posted:
+<ul>
+	{% for post in site.posts %}
+  	<li><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
+	{% endfor %}
+</ul>
+<a href="{{site.baseurl}}/atom.xml">
+	<img src="{{site.baseurl}}/static/images/feed-icon-14x14.png"/>
+</a>

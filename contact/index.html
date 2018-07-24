@@ -2,7 +2,7 @@
 layout: bare
 nav: contact
 page_name: Contact Me
-tagline: Getting in touch
+tagline: Need to get in touch?
 modes: [
 	{
 		'url': 'https://www.linkedin.com/in/giannigambetti'
@@ -32,31 +32,21 @@ modes: [
 	}
 ]
 ---
-<div class="row">
-	<div class="col-md-6">
-		Need to get in touch? Here's where to find me.
-		<br class="hidden-xs">
-		And just in case,
-		<a
-			href="{{site.baseurl}}/static/public-key.asc"
-			title="GPG Key Fingerprint: 0D94 1BE2 A285 8FA0 0F34  BF4F 95BB 8B37 AD88 0C27">
-			my GPG Key
-		</a> with fingerprint:
-		<br class="hidden-xs">0D94 1BE2 A285 8FA0 0F34  BF4F 95BB 8B37 AD88 0C27
-	</div>
-</div>
+Here's where to find me.
+And just in case,
+<a
+	href="{{site.baseurl}}/static/public-key.asc"
+	title="GPG Key Fingerprint: 0D94 1BE2 A285 8FA0 0F34  BF4F 95BB 8B37 AD88 0C27"
+    >my GPG Key</a>
+  with fingerprint: <strong>0D94 1BE2 A285 8FA0 0F34  BF4F 95BB 8B37 AD88 0C27</strong>
 <br/>
-<div class="row centered">
-	{% for mode in page.modes %}
-	<div class="col-md-2"><div class="card">
-		<a href="{{ mode.url }}">
-			<div class="content">
-				<img
-					src="{{site.baseurl}}/static/images/{{mode.img_url}}" alt="{{ mode.alt }}"
-					width="64px" height="64px"></img>
-				<br>{{ mode.text }}
-			</div>
-		</a>
-	</div></div>
-	{% endfor %}
-</div>
+{% for mode in page.modes %}
+<a href="{{ mode.url }}">
+	<div>
+		<img
+			src="{{site.baseurl}}/static/images/{{mode.img_url}}" alt="{{ mode.alt }}"
+			width="64px" height="64px"></img>
+		{{ mode.text }}
+	</div>
+</a>
+{% endfor %}
