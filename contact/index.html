@@ -40,13 +40,13 @@ And just in case,
     >my GPG Key</a>
   with fingerprint: <strong>0D94 1BE2 A285 8FA0 0F34  BF4F 95BB 8B37 AD88 0C27</strong>
 <br/>
+<br/>
+<div class=menu>
 {% for mode in page.modes %}
 <a href="{{ mode.url }}">
-	<div>
-		<img
-			src="{{site.baseurl}}/static/images/{{mode.img_url}}" alt="{{ mode.alt }}"
-			width="64px" height="64px"></img>
-		{{ mode.text }}
-	</div>
+    <img
+		  src="{{site.baseurl}}/static/images/{{mode.img_url}}" alt="{{ mode.alt }}"
+ 			width="64px" height="64px"></img>
 </a>
 {% endfor %}
+</div>

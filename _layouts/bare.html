@@ -3,24 +3,31 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>{% if name %}{{ name }} - {% endif %}{{ site.title }}</title>
+	<title>{{ name }} - {{ site.title }}</title>
 	<link rel=alternate type=application/atom+xml title="Gianni's Blog" href={{site.baseurl}}/atom.xml>
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
   <style type="text/css">
     body {
-      margin: 40px auto;
-      max-width: 750px;
-      line-height: 1.6;
       font-size: 18px;
       background-color: #EEEEEE;
-      padding: 0 10px;
+      line-height: 1.6;
+      margin: 0px;
+      padding: 0;
+    }
+    .content {
+      margin: 20px auto;
+      max-width: 750px;
     }
     .navbar {
-      top: 0;
-      position: sticky;
+      max-width: 750px;
+      margin: 0px auto;
+    }
+    .navbar-container {
       background-color: #DDDDDD;
-      padding: 0 10px;
+      padding: 10px;
+      position: sticky;
+      top: 0;
     }
     .menu {
       display: flex;
@@ -28,17 +35,15 @@
       justify-content: space-between;
     }
     blockquote {
-      padding-left: 10px;
       border-left: 3px solid #555555;
+      padding-left: 10px;
     }
   </style>
 	<!-- Last updated: {{ site.time }} -->
 </head>
 <body>
   {% include navbar.html %}
-	<h1>{{ name }}</h1>
-	<p>{{ tagline }}</p>
-	<div class="{{ page.nav }}">
+	<div class=content>
    	{{ content }}
  	</div>
 </body>

@@ -1,6 +1,13 @@
-<div class="navbar menu">
- <a href="{{site.baseurl}}/">{{ site.author }}</a>
- {% for nav in site.navigation %}
-   | <a href="{{site.baseurl}}/{{ nav.path }}/">{{ nav.name }}</a>
+{% assign nav = page.nav | default: layout.nav %}
+<div class="navbar-container">
+ <div class="navbar menu">
+ <span>{{ site.author }}</span>
+ {% for nav_ in site.navigation %}
+   {% if nav == nav_.path %}
+     | <a href="{{site.baseurl}}/{{ nav_.path }}/">[[{{ nav_.name }}]]</a>
+   {% else %}
+     | <a href="{{site.baseurl}}/{{ nav_.path }}/">{{ nav_.name }}</a>
+   {% endif %}
  {% endfor %}
+</div>
 </div>
