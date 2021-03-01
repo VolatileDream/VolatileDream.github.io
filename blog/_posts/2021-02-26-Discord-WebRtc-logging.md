@@ -3,6 +3,8 @@ layout: blog-post
 tags: [ 'discord' ]
 ---
 
+UPDATE: I incorrectly diagnose the fix in this article.
+
 I recently noticed a bunch of log spam in my `~/.xsession-errors` file:
 
 ```
@@ -49,25 +51,39 @@ bases. I ended up searching for a few things in the `strings` output: `--`
 (for flag strings), `getOptionValue` (I saw some flag looking javascript),
 `trace`, `log`, and `rtc`.
 
-I ended up finding `webrtc-event-logging`, not displayed as a flag, but maybe?
+---
+
+UPDATE: Apparently none of the below is correct, something I did stopped the
+logging temporarily, but I do not know what.
+
+I've reverted to running discord like this: `discord > /dev/null 2> /dev/null`,
+which fixes the issue. It appears as though `stderr` is redirected to
+`.xsession-errors`, by what I do not know.
+
+Original content below left for posterity.
+
+---
+
+~~I ended up finding `webrtc-event-logging`, not displayed as a flag, but maybe?
 A quick search for `discord webrtc-event-logging` reveals some results that
 strongly imply that this is a flag, and maybe what we're looking for. Without
-looking up the flag let's assume passing it `0` disables everything?
+looking up the flag let's assume passing it `0` disables everything?~~
 
-It turns out this is the flag we're looking for. Setting
+~~It turns out this is the flag we're looking for. Setting
 `--webrtc-event-logging 0` does disable the log spam, horray! **But** what did
-we just do? Did we tell Discord to log to a file named `0`?
+we just do? Did we tell Discord to log to a file named `0`?~~
 
-Okay back to the search. Again from the chromium source we can find some
+~~Okay back to the search. Again from the chromium source we can find some
 [documentation for the flag][rtc-flag]. It states *"accepts the path to which
 the local logs would be stored"*, uh oh. We did just tell discord to write to
 a file named `0`. What about using `--no-webrtc-event-logging`? Some frameworks
 provide `no-` as a flag prefix to explicitly disable flags. And as a last resort
-we could fall back to `--webrtc-event-logging /dev/null`.
+we could fall back to `--webrtc-event-logging /dev/null`.~~
 
-It turns out that `--no-webrtc-event-logging` does stop the logging that I was
+~~It turns out that `--no-webrtc-event-logging` does stop the logging that I was
 seeing in `.xsession-errors`. Thank goodness. My only complaint is that the
-`--help` flag wasn't any use.
+`--help` flag wasn't any use.~~
+
 
 [enumerate-video]: https://chromium.googlesource.com/external/webrtc/stable/webrtc/+/master/modules/video_capture/linux/device_info_linux.cc#60
 [electron]: https://www.electronjs.org/
