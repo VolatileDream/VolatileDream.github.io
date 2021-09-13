@@ -6,6 +6,7 @@ sections: [
   {
     title: "Experience"
     ,id: "experience"
+    ,hide: false
     ,subsections : [
       {
         title: "Google - Account Abuse Team"
@@ -54,6 +55,13 @@ gather technical requirements, and Service Level Objectives."
           ,"Technologies: Java, Protocol Buffers, Google Spanner, MapReduce"
         ]
       },
+    ]
+  },
+  {
+    title: "Co-op"
+    ,id: "co-op-terms"
+    ,hide: true
+    ,subsections : [
       {
         title: "Pivotal Labs (Xtreme Labs)"
         ,id: "pivotal"
@@ -127,6 +135,7 @@ gather technical requirements, and Service Level Objectives."
   },{
     title: "Education"
     ,id: "education"
+    ,hide: false
     ,subsections : [
       {  title: "University of Waterloo"
         ,id: "uw"
@@ -156,8 +165,16 @@ gather technical requirements, and Service Level Objectives."
 ]
 ---
 {%- for section in page.sections -%}
+{%- comment -%}
+Title is placed outside, so that we can display / hide the whole section.
+{%- endcomment -%}
+<h2 class='section-header'
+    id='{{ section.id }}-header'
+    onclick="toggle_section('{{section.id}}')">
+      {{ section.title }}
+      <button on-click="toggle_section('{{section.id}}')">-</button>
+</h2>
 <div id='{{ section.id }}'>
-    <h2>{{ section.title }}</h2>
   {%- for sub in section.subsections -%}
   <div id='{{ sub.id }}'>
     <h3><a href="{{ sub.url }}">{{ sub.title }}</a></h3>
@@ -178,3 +195,31 @@ gather technical requirements, and Service Level Objectives."
   {%- endfor -%}
 </div>
 {%- endfor -%}
+<script>
+  let default_hide = [
+    {%- for section in page.sections -%}
+      {%- if section.hide -%}
+      '{{ section.id }}',
+      {%- endif -%}
+    {%- endfor -%}
+  ];
+  function toggle_section(id) {
+    let element = document.getElementById(id);
+    let button = document.getElementById(id + '-header').children[0];
+    if (element.style.display) {
+      element.style.display = "";
+      button.textContent = '-';
+    } else {
+      element.style.display = "none";
+      button.textContent = '+';
+    }
+  }
+  for (let i = 0; i < default_hide.length; i++) {
+    toggle_section(default_hide[i]);
+  }
+</script>
+<style>
+.section-header:hover {
+  color: grey;
+}
+</style>
