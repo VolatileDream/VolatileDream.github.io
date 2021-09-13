@@ -8,6 +8,53 @@ sections: [
 		,id: "experience"
 		,subsections : [
 			{
+				title: "Google - Account Abuse Team"
+				,id: "google2"
+				,url: "https://google.com/"
+				,position: "Software Engineer"
+				,dates: "2018-08 to present"
+				,points: [
+          "Improved the security of Google Account Credentials on Android"
+          ,[
+              "Part of Google's <a href='https://landing.google.com/advancedprotection/'>Advanced Protection Program</a> &amp; <a href='https://blog.google/technology/safety-security/furthering-our-support-election-security/'>Election Security effort</a>"
+              ,"Liaised with teams across Google’s Identity Infrastructure, Android, and Anti-Abuse teams to
+gather technical requirements, and Service Level Objectives."
+              ,"Selected technologies, lead implementation, and rollout."
+            ]
+          ,"Updated existing Web Browser credential protections for Cookie SameSite changes."
+          ,[
+              "Affected all authenticated browser traffic for all users on all products."
+              , "Point of contact for rollout."
+          ]
+          ,"Community Contributions: Employee Proxy volunteer"
+          ,"Technologies: C++, Go-lang, Python, Protocol Buffers, Google Spanner, MapReduce"
+				]
+			},
+			{
+				title: "Google - Android"
+				,id: "google1"
+				,url: "https://google.com/"
+				,position: "Software Engineer"
+				,dates: "2015-10 to 2018-08"
+				,points: [
+          "Part of the team maintaining Android Over The Air Updates (<a href='https://developers.google.com/android/over-the-air/'>https://developers.google.com/android/over-the-air/</a>)"
+          ,[
+            "Rebuilt Targeting logic to improve performance, maintainability, and optimized output size"
+            ,"Refactored Reporting to extract, rebuild, and consolidate logic into a single module, improving functionality and simultaneously adding extensive documentation."
+            ,"Directed conversations with local customers and internal teams to achieve consensus on resolving conflicts and critical edge case conditions resulting in a design with intuitive flow."
+          ]
+          ,"Administrative &amp; Customer Data Access Tooling"
+          ,[
+            "Overhauled and upgraded legacy administrative tooling to improve access controls."
+            ,"Designed and implemented core concepts for accessing Android related data."
+            ,"Mentored and guided international Android infrastructure developers to migrate their tooling to the new system."
+            ,"Provided templates and video conferenced over multiple weeks to answer questions."
+            ,"Migrated and optimized client configuration troubleshooting functionality: re-implemented functionality across services, and reduced output by 95%."
+          ]
+          ,"Technologies: Java, Protocol Buffers, Google Spanner, MapReduce"
+				]
+			},
+			{
 				title: "Pivotal Labs (Xtreme Labs)"
 				,id: "pivotal"
 				,url: "http://pivotallabs.com/"
@@ -108,20 +155,26 @@ sections: [
 	}
 ]
 ---
-{% for section in page.sections %}
+{%- for section in page.sections -%}
 <div id='{{ section.id }}'>
 		<h2>{{ section.title }}</h2>
-  {% for sub in section.subsections %}
+  {%- for sub in section.subsections -%}
 	<div id='{{ sub.id }}'>
 		<h3><a href="{{ sub.url }}">{{ sub.title }}</a></h3>
 		<h5>{{ sub.position }}</h5>
 		<h6>{{ sub.dates }}</h6>
 	</div>
-	{% if sub.points %}
+	{%- if sub.points -%}
 		<ul>
-			{% for p in sub.points %}<li>{{ p }}</li>{% endfor %}
+			{%- for p in sub.points -%}
+      {%- if p.first -%}
+        <ul>{%- for s in p -%}<li>{{ s }}</li>{%- endfor -%}</ul>
+      {%- else -%}
+        <li>{{ p }}</li>
+      {%- endif -%}
+      {%- endfor -%}
 		</ul>
-	{% endif %}
-  {% endfor %}
+	{%- endif -%}
+  {%- endfor -%}
 </div>
-{% endfor %}
+{%- endfor -%}
