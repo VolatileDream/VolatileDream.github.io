@@ -1,0 +1,19 @@
+# Opt out of Google indexing.
+User-agent: APIs-Google
+User-agent: Mediapartners-Google
+User-agent: AdsBot-Google-Mobile
+User-agent: AdsBot-Google
+User-agent: Googlebot-Image
+User-agent: Googlebot-News
+User-agent: Googlebot
+User-agent: AdsBot-Google-Mobile-Apps
+User-agent: FeedFetcher-Google
+User-agent: Google-Read-Aloud
+User-agent: DuplexWeb-Google
+User-agent: Google Favicon
+User-agent: googleweblight
+User-agent: Storebot-Google
+Disallow: /
+
+User-agent: *
+Allow: /
