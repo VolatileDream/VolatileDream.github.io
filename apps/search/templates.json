@@ -2,13 +2,13 @@
 
 	"display" : [
 		"<div id='search_display'>"
-		, "<div id='nav' />"
+		, "<div id='nav'></div>"
 		, "<p id='name' type='text' class='form-control' disabled>"
 		,   "<strong>{{focused.subject}}{{focused.catalog_number}}</strong>"
 		,   " - {{focused.title}}"
 		, "</p>"
 		, "<p id='description'>{{focused.description}}</p>"
-		, "<div id='prereqs' />"
+		, "<div id='prereqs'></div>"
 		,"</div>"
 	],
 
