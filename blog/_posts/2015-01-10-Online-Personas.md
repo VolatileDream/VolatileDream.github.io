@@ -11,8 +11,8 @@ As part of courses this term, I have a few courses for which I'm doing readings 
 ### That's not me
 
 <div class="media">
-	<a class="pull-left" href="{{ site.baseurl }}{{ page.img-steve }}">
-		<img src="{{ site.baseurl }}{{ page.img-steve }}" style="width: 140px; height=140px" alt="Scumbag Steve (aka not me)" >
+	<a class="pull-left" href="{{ page.img-steve }}">
+		<img src="{{ page.img-steve }}" style="width: 140px; height=140px" alt="Scumbag Steve (aka not me)" >
 	</a>
 	<div class="media-body">
 		<h4 class="media-heading">This is a great example of a picture that is not me.</h4>
@@ -20,7 +20,7 @@ As part of courses this term, I have a few courses for which I'm doing readings 
 			The internet and social media have provided a diverse set of platforms for people to show off who they are, and things that they do. Each platform embeds within it an implicit set of rules of engagement between participants, or in the words of <a href="https://en.wikipedia.org/wiki/The_medium_is_the_message">Marshall McLuhan: "the medium is the message"</a>.
 		</p>
 		<p>
-			For the various differing <abbr title="public images">personas</abbr> that each person erects -- on the vast number of social media accounts and websites that they are a member of -- Ellison posed the question of exactly how similar they would be to the person's actual self (specifically on dating sites). As someone with a multitude of accounts across the web (not all of which are listed <a href="{{ site.baseurl }}/contact/">here</a>), I can say with very little thought that none of those accounts are a perfect representation of my actual self.
+			For the various differing <abbr title="public images">personas</abbr> that each person erects -- on the vast number of social media accounts and websites that they are a member of -- Ellison posed the question of exactly how similar they would be to the person's actual self (specifically on dating sites). As someone with a multitude of accounts across the web (not all of which are listed <a href="/contact/">here</a>), I can say with very little thought that none of those accounts are a perfect representation of my actual self.
 		</p>
 	</div>
 </div>
@@ -38,5 +38,5 @@ Inspired by the article [Codex Vitae by Buster Benson][4], I also attempt to kee
 
 [1]: http://onlinelibrary.wiley.com/doi/10.1111/j.1083-6101.2006.00020.x/full
 [2]: https://en.wikipedia.org/wiki/The_Presentation_of_Self_in_Everyday_Life
-[3]: {{ site.baseurl }}/blog/2015/01/07/Life-on-the-Internet.html
+[3]: /blog/2015/01/07/Life-on-the-Internet.html
 [4]: http://wayoftheduck.com/codex-vitae

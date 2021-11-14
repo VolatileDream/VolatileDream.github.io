@@ -9,5 +9,4 @@ navigation: [
     ,{'name': 'Resume', 'path':'resume' } ]
 
 
-baseurl: //volatiledream.github.io
 markdown: kramdown

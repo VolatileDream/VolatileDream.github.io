@@ -39,9 +39,9 @@ Such is the life of a "digital native", navigating the choppy flow of bits and b
 [5]: https://en.wikipedia.org/wiki/Microsoft_Messenger_service
 [6]: https://en.wikipedia.org/wiki/Internet_Relay_Chat
 [7]: https://en.wikipedia.org/wiki/Streisand_effect
-[8]: {{ site.baseurl }}/contact/
+[8]: /contact/
 [9]: https://www.linkedin.com/
 [10]: https://en.wikipedia.org/wiki/Graph_%28mathematics%29
-[11]: {{ site.baseurl }}/about/
-[12]: {{ site.baseurl }}/blog/
+[11]: /about/
+[12]: /blog/
 
