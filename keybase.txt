@@ -54,3 +54,58 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/volatiledream
 
 ==================================================================
+https://keybase.io/volatiledream
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://gianni.cubecubed.xyz
+  * I am volatiledream (https://keybase.io/volatiledream) on keybase.
+  * I have a public key ASBn0e9mPgk0ZJDHK8dBuAQLNvtU1ApTTOaPdqSLciHFPQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012088bd274f1cedafca8e6d22b5bec35d20c3143824307e454ae279f024162a41ea0a",
+      "host": "keybase.io",
+      "kid": "012067d1ef663e09346490c72bc741b8040b36fb54d40a534ce68f76a48b7221c53d0a",
+      "uid": "9d6ce5a75a21d35b120708cc818ff219",
+      "username": "volatiledream"
+    },
+    "merkle_root": {
+      "ctime": 1636919265,
+      "hash": "ad17f4b4050da58d6b5d04199de19411bd941f02d536cda1cb244eb51f173286cfcf8605eaa626337cb8390c6ed943f02e2d0c8ad1534d0b24428eea7a2d8f53",
+      "hash_meta": "4038388f1772f3f6dd94360d4f8e5d8695f22408be8302b7db08688f9aa62f15",
+      "seqno": 21219548
+    },
+    "service": {
+      "entropy": "IA8Zp1cEGsYVQcYzubvgBVOc",
+      "hostname": "gianni.cubecubed.xyz",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.8.1"
+  },
+  "ctime": 1636919296,
+  "expire_in": 504576000,
+  "prev": "68fc926761b4f427e6d2f0fe12358777e998a86c8e7b7f261054d8d7a152bf44",
+  "seqno": 63,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgZ9HvZj4JNGSQxyvHQbgECzb7VNQKU0zmj3aki3IhxT0Kp3BheWxvYWTESpcCP8QgaPySZ2G09Cfm0vD+EjWHd+mYqGyOe38mEFTY16FSv0TEINSQLzTxKSQECyNtTaRarATGRdaRe/IQxRhddC5ZR+cmAgHCo3NpZ8RAyL+QrOmBWsEz1g9KFwPEdj8X1lR6X2b+AuFT8TKl2T6kwzxrtygICuAkv5S5XgKIkblN4DKzf8LCAutuB+HVC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEII7mjK+U7tZ+MLZnFo3/10UuF9aZW90wyA1Ger9IsoLPo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/volatiledream
+
+==================================================================
