@@ -14,16 +14,16 @@ page_name: Blog
   <h4>{{ post.subtitle }}</h4>
 {% endif %}
 <h6 class=menu>Updated on {{ post.date | date_to_string }}
-	<a href="{{site.baseurl}}{{ post.url }}">permalink</a>
+	<a href="{{ post.url }}">permalink</a>
 </h6>
 <div class=menu>
 	{% if post.previous %}
-		<a href="{{site.baseurl}}{{ post.previous.url }}">&lt;&lt;&nbsp;({{ post.previous.title }})</a>
+		<a href="{{ post.previous.url }}">&lt;&lt;&nbsp;({{ post.previous.title }})</a>
   {% else %}
     &nbsp;
 	{% endif %}
 	{% if post.next %}
-		<a href="{{site.baseurl}}{{ post.next.url }}">({{ post.next.title }})&nbsp;&gt;&gt;</a>
+		<a href="{{ post.next.url }}">({{ post.next.title }})&nbsp;&gt;&gt;</a>
   {% else %}
     &nbsp;
 	{% endif %}
@@ -36,7 +36,7 @@ page_name: Blog
 Previously:
 <ul>
 	{% for post in site.posts %}
-  	<li><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>
+  	<li><a href="{{ post.url }}">{{ post.title }}</a>
 	{% endfor %}
 </ul>
-<a href="{{site.baseurl}}/atom.xml">RSS</a>
+<a href="/atom.xml">RSS</a>

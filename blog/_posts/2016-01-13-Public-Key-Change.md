@@ -10,5 +10,5 @@ According to a [blog entry by dkg at debian-administration.org][1], key comments
 [Revocation proof.][2]
 
 [1]: https://www.debian-administration.org/users/dkg/weblog/97
-[2]: {{site.baseurl}}/static/revoked-key.asc
-[3]: {{site.baseurl}}/static/public-key.asc
+[2]: /static/revoked-key.asc
+[3]: /static/public-key.asc

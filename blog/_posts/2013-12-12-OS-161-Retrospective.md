@@ -58,7 +58,7 @@ One particular point of interest, we needed to give the operating system it's ow
 
 This deserves a post all to itself, so I'll write about it later.
 
-[1]: {{site.baseurl}}/resume/#uw "About"
+[1]: /resume/#uw "About"
 [2]: https://www.student.cs.uwaterloo.ca/~cs350/ "CS350 - Operating Systems"
 [3]: http://en.wikipedia.org/wiki/Synchronization
 [4]: http://en.wikipedia.org/wiki/Child_process

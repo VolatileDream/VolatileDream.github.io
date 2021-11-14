@@ -18,8 +18,8 @@ So, as part of the course we had to design and implement an html widget. The wid
 But here it is: [UW Course Search][1].
 
 
-[1]: {{site.baseurl}}/apps/search/ "Search App"
-[2]: {{site.baseurl}}{{os_post.url}}
+[1]: /apps/search/ "Search App"
+[2]: {{os_post.url}}
 [3]: https://www.student.cs.uwaterloo.ca/~cs350/ "CS350 - Operating Systems"
-[4]: {{site.baseurl}}/resume/#uw
+[4]: /resume/#uw
 [5]: https://www.student.cs.uwaterloo.ca/~cs349/ "CS349 - User Interfaces"

@@ -34,7 +34,7 @@ modes: [
 Here's where to find me.
 And just in case,
 <a
-	href="{{site.baseurl}}/static/public-key.asc"
+	href="/static/public-key.asc"
 	title="GPG Key Fingerprint: 0D94 1BE2 A285 8FA0 0F34  BF4F 95BB 8B37 AD88 0C27"
     >my GPG Key</a>
   with fingerprint: <strong>0D94 1BE2 A285 8FA0 0F34  BF4F 95BB 8B37 AD88 0C27</strong>
@@ -44,7 +44,7 @@ And just in case,
 {% for mode in page.modes %}
 <a href="{{ mode.url }}">
     <img
-		  src="{{site.baseurl}}/static/images/{{mode.img_url}}" alt="{{ mode.alt }}"
+		  src="/static/images/{{mode.img_url}}" alt="{{ mode.alt }}"
  			width="64px" height="64px"/>
 </a>
 {% endfor %}
