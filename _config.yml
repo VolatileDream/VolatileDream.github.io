@@ -1,7 +1,6 @@
 title: Gianni Gambetti
 author: Gianni Gambetti
 exclude: [ 'Makefile', '.gitignore', 'Tupfile', '.gitmodules' ]
-lastupdate: '2015/11/15'
 navigation: [
     {'name': 'About', 'path':'about' }
     ,{'name': 'Blog', 'path':'blog' }
