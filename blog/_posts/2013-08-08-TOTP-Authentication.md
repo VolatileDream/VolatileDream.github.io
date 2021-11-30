@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-tags: ['cryto', 'security']
+tags: ['crypto', 'security']
 ---
 
 With companies like [Google][2], [Dropbox][3] and [Amazon][4] adopting [TOTP][1], it would be a good idea to understand what it is, and how it works.
