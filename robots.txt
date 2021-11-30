@@ -17,4 +17,3 @@ Disallow: /
 
 User-agent: *
 Allow: /
-Disallow: /card.txt
