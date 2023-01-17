@@ -1,0 +1,177 @@
+[
+  {
+    "title": "Experience",
+    "id": "experience",
+    "hide": false,
+    "subsections": [
+      {
+        "title": "Hashicorp",
+        "id": "hashicorp",
+        "url": "https://hashicorp.com",
+        "position": "Senior Software Engineer",
+        "dates": "2022-03 to present",
+        "points": []
+      },
+      {
+        "title": "Google - Account Abuse Team",
+        "id": "google2",
+        "url": "https://google.com/",
+        "position": "Software Engineer",
+        "dates": "2018-08 to 2021-07",
+        "points": [
+          "Improved the security of Google Account Credentials on Android",
+          [
+            "Part of Google's <a href='https://landing.google.com/advancedprotection/'>Advanced Protection Program</a> &amp; <a href='https://blog.google/technology/safety-security/furthering-our-support-election-security/'>Election Security effort</a>",
+            "Liaised with teams across Google's Identity Infrastructure, Android, and Anti-Abuse teams to gather technical requirements, and Service Level Objectives.",
+            "Selected technologies, lead implementation, and rollout."
+          ],
+          "Updated existing Web Browser credential protections for Cookie SameSite changes.",
+          [
+            "Affected all authenticated browser traffic for all users on all products.",
+            "Point of contact for rollout."
+          ],
+          "Community Contributions: Employee Proxy volunteer",
+          "Technologies: C++, Go-lang, Python, Protocol Buffers, Google Spanner, MapReduce"
+        ]
+      },
+      {
+        "title": "Google - Android",
+        "id": "google1",
+        "url": "https://google.com/",
+        "position": "Software Engineer",
+        "dates": "2015-10 to 2018-08",
+        "points": [
+          "Part of the team maintaining Android Over The Air Updates (<a href='https://developers.google.com/android/over-the-air/'>https://developers.google.com/android/over-the-air/</a>)",
+          [
+            "Rebuilt Targeting logic to improve performance, maintainability, and optimized output size",
+            "Refactored Reporting to extract, rebuild, and consolidate logic into a single module, improving functionality and simultaneously adding extensive documentation.",
+            "Directed conversations with local customers and internal teams to achieve consensus on resolving conflicts and critical edge case conditions resulting in a design with intuitive flow."
+          ],
+          "Administrative &amp; Customer Data Access Tooling",
+          [
+            "Overhauled and upgraded legacy administrative tooling to improve access controls.",
+            "Designed and implemented core concepts for accessing Android related data.",
+            "Mentored and guided international Android infrastructure developers to migrate their tooling to the new system.",
+            "Provided templates and video conferenced over multiple weeks to answer questions.",
+            "Migrated and optimized client configuration troubleshooting functionality: re-implemented functionality across services, and reduced output by 95%."
+          ],
+          "Technologies: Java, Protocol Buffers, Google Spanner, MapReduce"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Co-op",
+    "id": "co-op-terms",
+    "hide": true,
+    "subsections": [
+      {
+        "title": "Pivotal Labs (Xtreme Labs)",
+        "id": "pivotal",
+        "url": "http://pivotallabs.com/",
+        "position": "Agile Engineer",
+        "dates": "2014-01 to 2014-04",
+        "points": [
+          "Delivered widely distributed (millions of users) widget.",
+          "Agile development environment with strict Pair Programming and Test Driven Development (TDD) practices.",
+          "Selected to be part of a small team who researched feasibility of development for emerging mobile technologies, focused on Pebble Smartwatch and iBeacons. Delivered demos to external client (VP Level). Prototypes were very well received and follow-up sessions set-up for possible engagement.",
+          "Developed on: iOS (Objective C), BlackBerry 10 (C++), Android (Java), Pebble (C)."
+        ]
+      },
+      {
+        "title": "BluePrint Software Systems",
+        "id": "bp",
+        "url": "http://www.blueprintsys.com/",
+        "position": ".Net Developer",
+        "dates": "2013-05 to 2013-08",
+        "points": [
+          "Worked with Rubik team to develop algorithms for flexible Z Ordering. While improving existing functionality, I proved that key product requirements were mathematically impossible to accomplish, this resulted in system redesign removing existing bugs and making the system more flexible in performance.",
+          "Updated corporate flagship product for internationalization (i18n). Introduced best practices, cross-trained team, and created documentation.",
+          "Technologies: C# / Silverlight."
+        ]
+      },
+      {
+        "title": "Bazaarvoice",
+        "id": "bv",
+        "url": "https://bazaarvoice.com",
+        "position": "Software Developer",
+        "dates": "2012-09 to 2012-12",
+        "points": [
+          "Selected as 1 of 2 students from Waterloo - first time selecting international co-op students.",
+          "Developed a Client Configuration Service improving configuration time from 2 weeks to 5 minutes, and drastically reduced required training.",
+          "Developed prototype of client-facing ratings and reviews analytics dashboard project to quickly identify strategically important products. Flew with VP of Engineering from Austin to New York office to perform technical knowledge transfer to NY team.",
+          "Technologies: Python, Flask, Memcached, HTML5, JavaScript, EmberJS."
+        ]
+      },
+      {
+        "title": "Desire2Learn",
+        "id": "d2l2",
+        "url": "https://desire2learn.com",
+        "position": "Mobile Software Developer",
+        "dates": "2012-01 to 2012-05",
+        "points": [
+          "Selected as primary developer for Grades integration module in Campus Life product. Developed mobile app of key functionality (Grades) of flagship product (Learning Environment).",
+          "Helped identify a denial of service condition and prevented server outage.",
+          "Developed in-house Android caching solution.",
+          "Technologies: Android (Java)."
+        ]
+      },
+      {
+        "title": "Desire2Learn",
+        "id": "d2l1",
+        "url": "https://desire2learn.com",
+        "position": "Software Developer",
+        "dates": "2011-05 to 2011-11",
+        "points": [
+          "Exceeded expectations and proved technical competence through bug-fixing period. I was selected and tasked to work on new feature introduction on mainline products.",
+          "Improved Assignment Submission System component of flagship product (Learning Environment). Centralized business logic, refactored legacy code, and exposed functionality to REST APIs.",
+          "Technologies: .Net, C#, MS-SQL."
+        ]
+      },
+      {
+        "title": "Precidia",
+        "id": "precidia",
+        "url": "http://precidia.ca",
+        "position": "ePayments Productivity Student",
+        "dates": "2010-06 to 2010-09",
+        "points": [
+          "Design and creation of test plan for eCommerce site",
+          "Organizational improvements to customer facing wiki for product setup"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Education",
+    "id": "education",
+    "hide": true,
+    "subsections": [
+      {
+        "title": "University of Waterloo",
+        "id": "uw",
+        "url": "https://uwaterloo.ca",
+        "position": "Bachelor of Computer Science",
+        "dates": "2010-09 to 2015-08",
+        "points": [
+          "Computer Science Club President - The One Responsible",
+          "Real-Time Programming - implemented a micro-kernel in ARMv4",
+          "Orientation leader (Tie Guard) 2013",
+          "Orientation leader (Head Black Tie) 2012",
+          "Orientation leader (Black Tie) 2011",
+          "Contributing writer to MathNews (Math Faculty student paper)"
+        ]
+      },
+      {
+        "title": "Earl of March SS.",
+        "id": "eom",
+        "url": "http://earlofmarch.com",
+        "position": "High School Diploma",
+        "dates": "2006-09 to 2010-06",
+        "points": [
+          "Member of the Ultimate Team",
+          "Junior Band ( 2 years )"
+        ]
+      }
+    ]
+  }
+]
