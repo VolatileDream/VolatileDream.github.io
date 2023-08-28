@@ -1,0 +1,20 @@
+{%- if include.editors -%}
+{%- assign count = include.editors | size -%}
+<hr/>
+<p>
+  Thanks to
+  {%- if count > 1 -%} 
+    {%- for e in include.editors -%}
+      {%- assign name = site.data.blog.editors[e] -%}
+      {%- if forloop.index == count - 1 -%}
+        {{ name }}, and
+      {%- else -%}
+        {{ name }},
+      {%- endif -%}
+    {%- endfor -%}
+  {%- else %}
+    {{ site.data.blog.editors[include.editors.first] }}
+  {% endif -%}
+  for comments/corrections/discussion.
+</p>
+{%- endif -%}
