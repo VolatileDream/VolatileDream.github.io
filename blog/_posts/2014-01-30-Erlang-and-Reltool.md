@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-tags: [ "erlang", "reltool" ]
+tags: ["erlang","reltool"]
 ---
 
 This is a collection of my notes on [Erlang][1] and [RelTool][2].

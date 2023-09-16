@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-tags: [ 'cs492', 'uwaterloo', 'crypto', 'security' ]
+tags: ["cs492","uwaterloo","crypto","security"]
 subtitle: A Computing Dilemma for CS492
 ---
 

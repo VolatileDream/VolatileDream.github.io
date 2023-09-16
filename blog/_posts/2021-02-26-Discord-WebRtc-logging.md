@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-tags: [ 'discord' ]
+tags: ["discord"]
 ---
 
 UPDATE: I incorrectly diagnose the fix in this article.

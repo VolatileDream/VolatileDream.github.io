@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-tags: [ 'engl108d', 'uwaterloo', 'me', "paper review" ]
+tags: ["engl108d","uwaterloo","me","paper review"]
 subtitle: Presentation of Self in Everyday Life for ENGL108D
 
 img-steve: /static/blog/2015-01-10-scumbag-steve.jpg

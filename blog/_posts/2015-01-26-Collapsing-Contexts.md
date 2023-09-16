@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-tags: [ 'engl108d', 'uwaterloo', 'me', "paper review" ]
+tags: ["engl108d","uwaterloo","me","paper review"]
 subtitle: It's Complicated for ENGL108D
 ---
 

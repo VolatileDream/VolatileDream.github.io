@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-tags: [ 'os', 'operating systems', 'os161', 'uwaterloo' ]
+tags: ["os","operating systems","os161","uwaterloo"]
 title: "OS 161 Retrospective"
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-tags: [ 'engl108d', 'uwaterloo', 'me' ]
+tags: ["engl108d","uwaterloo","me"]
 subtitle: Digital Life for ENGL108D
 ---
 

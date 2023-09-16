@@ -1,6 +1,6 @@
 ---
 layout: blog-post
-tags: [ 'software', 'chronos', 'performance' ]
+tags: ["software","chronos","performance"]
 subtitle: An Adventure in Performance Tuning
 ---
 
