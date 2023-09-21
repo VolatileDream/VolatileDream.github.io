@@ -1,18 +1,18 @@
-{% assign nav = page.nav | default: layout.nav %}
+{%- assign nav = page.nav | default: layout.nav -%}
 <div class="navbar-container menu">
   <div class=navbar>
     <span>{{ site.author }}</span>
-    &gt;
-    {% for nav_ in site.navigation %}
+    &gt;&nbsp;
+    {%- for nav_ in site.navigation -%}
       {% if forloop.first != true %}
         |
       {% endif %}
-      {% if nav == nav_.path %}
+      {%- if nav == nav_.path -%}
         <a href="/{{ nav_.path }}/">[[{{ nav_.name }}]]</a>
-      {% else %}
+      {%- else -%}
         <a href="/{{ nav_.path }}/">{{ nav_.name }}</a>
-      {% endif %}
-    {% endfor %}
+      {%- endif -%}
+    {%- endfor -%}
   </div>
     <abbr title="pin to top">
       <a class=navbar-dismiss href='javascript:pin_navbar();'>^</a>

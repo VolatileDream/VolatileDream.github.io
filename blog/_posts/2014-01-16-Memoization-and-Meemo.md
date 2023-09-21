@@ -7,7 +7,7 @@ tags: ["python", "std in/out", "command-line"]
 
 While that sounds both complicated, and slightly confusing, let's look at some examples.
 
-{% highlight bash %}
+{%- highlight bash -%}
 > # print abc, def and abc, on seperate lines
 > echo -e "abc\ndef\nabc"
 abc
@@ -21,14 +21,14 @@ def
 > echo -e "abc\ndef\nabc" | meemo
 (no output)
 >
-{% endhighlight %}
+{%- endhighlight -%}
 
 There's a lot to take in here, so we'll break it down case by case. In the first example, we run `echo` and output to show that we're printing 3 items. After running it through [Meemo][1] we can see that we only get 2 items, that's because by default [Meemo][1] uses the newline character (`\n`) to delimit chunks that it should deduplicate. This is what [Meemo][1] sees: `"abc" DELIMITER "def" DELIMITER "abc" DELIMITER`. Then [Meemo][1] processes the input by printing out non-delimiters it hasn't seen before, and prints a delimiter after them. Which works out to be:
 
-{% highlight bash %}
+{%- highlight bash -%}
 "abc" DELIMITER
 "def" DELIMITER
-{% endhighlight %}
+{%- endhighlight -%}
 
 In the third case, what happens? All of a sudden [Meemo][1] decided not to print anything out. The truth behind the matter, is that [Meemo][1] is a smarter tool than has been given credit so far. [Meemo][1] permanently remembers everything it sees unless told otherwise. [Meemo][1] does this by creating a local cache file of all the things it's seen before and storing it in `.meemo.cache` (by default).
 
@@ -39,7 +39,7 @@ This behaviour lets us run [Meemo][1] with part of the dataset today, and anothe
 [Meemo][1] is written for [python3][2], and is fairly untested. While it can be embeded into a python application to deduplicate it's io, that hasn't really been tested for input.
 
 
-{% highlight bash %}
+{%- highlight bash -%}
 > ./meemo -h
 usage: meemo [-h] [-f FILE] [-n] [-d DELIMITER] [-p]
 
@@ -52,7 +52,7 @@ optional arguments:
   -d DELIMITER, --delimiter DELIMITER
                         set the file delimiter
   -p, --print           print out the cache contents
-{% endhighlight %}
+{%- endhighlight -%}
 
 [1]: https://github.com/VolatileDream/meemo
 [2]: http://python.org

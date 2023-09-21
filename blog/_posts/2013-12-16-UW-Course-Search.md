@@ -4,11 +4,11 @@ tags: ["uwaterloo"]
 title: "UW Course Search"
 ---
 
-{% for post in site.posts %}
-	{% if post.title == "OS 161 Retrospective" %}
-		{% assign os_post = post %}
-	{% endif %}
-{% endfor %}
+{%- for post in site.posts -%}
+	{%- if post.title == "OS 161 Retrospective" -%}
+		{%- assign os_post = post -%}
+	{%- endif -%}
+{%- endfor -%}
 
 
 On top of building parts of an [operating systems kernel][2] as part of my [Operating Systems][3] course during my past term at the [University of Waterloo][4], I also took a course on [User Interfaces][5]. As part of the course we designed the user interfaces for various applications to learn about UI design principles.

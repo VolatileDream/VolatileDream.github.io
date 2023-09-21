@@ -41,11 +41,11 @@ And just in case,
 <br/>
 <br/>
 <div class=menu>
-{% for mode in page.modes %}
+{%- for mode in page.modes -%}
 <a href="{{ mode.url }}">
     <img
 		  src="/static/images/{{mode.img_url}}" alt="{{ mode.alt }}"
  			width="64px" height="64px"/>
 </a>
-{% endfor %}
+{%- endfor -%}
 </div>

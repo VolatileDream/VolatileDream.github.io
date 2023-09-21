@@ -3,41 +3,41 @@ layout: bare
 nav: blog
 page_name: Blog
 ---
-{% if page.root_blog %}
-	{% assign post = site.posts.first %}
-	{% assign content = post.content %}
-{% else %}
-	{% assign post = page %}
-{% endif %}
+{%- if page.root_blog -%}
+	{%- assign post = site.posts.first -%}
+	{%- assign content = post.content -%}
+{%- else -%}
+	{%- assign post = page -%}
+{%- endif -%}
 <h2>{{ post.title }}</h2>
-{% if post.subtitle %}
+{%- if post.subtitle -%}
   <h4>{{ post.subtitle }}</h4>
-{% endif %}
+{%- endif -%}
 <h6 class=menu>Updated on {{ post.date | date_to_string }}
 	<a href="{{ post.url }}">permalink</a>
 </h6>
 <div class=menu>
-	{% if post.previous %}
+	{%- if post.previous -%}
 		<a href="{{ post.previous.url }}">&lt;&lt;&nbsp;({{ post.previous.title }})</a>
-  {% else %}
+  {%- else -%}
     &nbsp;
-	{% endif %}
-	{% if post.next %}
+	{%- endif -%}
+	{%- if post.next -%}
 		<a href="{{ post.next.url }}">({{ post.next.title }})&nbsp;&gt;&gt;</a>
-  {% else %}
+  {%- else -%}
     &nbsp;
-	{% endif %}
+	{%- endif -%}
 </div>
 <hr/>
 <div>
 	{{ content }}
 </div>
-{% include thanks-editors.html editors=post.editors %}
+{%- include thanks-editors.html editors=post.editors -%}
 <hr/>
 Previously:
 <ul>
-	{% for post in site.posts %}
+	{%- for post in site.posts -%}
   	<li><a href="{{ post.url }}">{{ post.title }}</a>
-	{% endfor %}
+	{%- endfor -%}
 </ul>
 <a href="/atom.xml">RSS</a>

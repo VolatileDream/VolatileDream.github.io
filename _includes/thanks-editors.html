@@ -12,9 +12,9 @@
         {{ name }},
       {%- endif -%}
     {%- endfor -%}
-  {%- else %}
+  {%- else -%}
     {{ site.data.blog.editors[include.editors.first] }}
-  {% endif -%}
+  {%- endif -%}
   for comments/corrections/discussion.
 </p>
 {%- endif -%}
