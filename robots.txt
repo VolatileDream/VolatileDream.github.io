@@ -13,6 +13,14 @@ User-agent: DuplexWeb-Google
 User-agent: Google Favicon
 User-agent: googleweblight
 User-agent: Storebot-Google
+# Also the AI bots...
+User-agent: CCBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: Google-Extended
+User-agent: Omgilibot
+User-Agent: FacebookBot
+User-Agent: AmazonBot
 Disallow: /
 
 User-agent: *
